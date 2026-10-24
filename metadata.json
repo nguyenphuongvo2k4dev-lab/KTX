@@ -1,0 +1,6 @@
+{
+  "name": "SmartDorm - Quản trị KTX ĐHQG",
+  "description": "Bảng điều khiển quản trị hệ sinh thái ký túc xá Đại học Quốc gia - Cloud Enterprise v2.4",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
