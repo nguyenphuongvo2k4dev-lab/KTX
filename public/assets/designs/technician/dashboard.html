@@ -1,0 +1,717 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container":"#eaedff","surface-container-lowest":"#ffffff","on-primary-container":"#cad3ff","on-surface":"#131b2e","on-background":"#131b2e","secondary":"#006591","on-primary-fixed-variant":"#0039b5","on-secondary":"#ffffff","secondary-container":"#39b8fd","on-error-container":"#93000a","outline-variant":"#c4c5d7","surface-container-high":"#e2e7ff","inverse-surface":"#283044","tertiary-fixed":"#e9ddff","error":"#ba1a1a","on-tertiary-container":"#ddcdff","on-primary-fixed":"#001551","tertiary-container":"#6b38d4","error-container":"#ffdad6","on-tertiary-fixed":"#23005c","on-secondary-container":"#004666","inverse-on-surface":"#eef0ff","on-tertiary-fixed-variant":"#5516be","primary-fixed-dim":"#b7c4ff","on-secondary-fixed":"#001e2f","surface-tint":"#2151da","surface-dim":"#d2d9f4","on-secondary-fixed-variant":"#004c6e","surface-bright":"#faf8ff","secondary-fixed-dim":"#89ceff","on-surface-variant":"#434655","surface-variant":"#dae2fd","on-error":"#ffffff","secondary-fixed":"#c9e6ff","primary-container":"#1d4ed8","background":"#faf8ff","surface-container-highest":"#dae2fd","on-primary":"#ffffff","inverse-primary":"#b7c4ff","primary":"#0037b0","tertiary-fixed-dim":"#d0bcff","tertiary":"#5311bc","on-tertiary":"#ffffff","surface-container-low":"#f2f3ff","outline":"#747686","surface":"#faf8ff","primary-fixed":"#dce1ff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-xl":"2rem","margin-tablet":"1.5rem","margin-mobile":"1rem","space-lg":"1.5rem","space-sm":"0.5rem",gutter:"1.5rem","gutter-lg":"2rem","space-md":"1rem","space-xs":"0.25rem","gutter-sm":"1rem","space-2xl":"3rem",margin:"2rem"},fontFamily:{"headline-md":["Be Vietnam Pro"],"code-md":["JetBrains Mono"],"label-lg":["Be Vietnam Pro"],"headline-sm":["Be Vietnam Pro"],"headline-lg":["Be Vietnam Pro"],"label-sm":["Be Vietnam Pro"],"body-lg":["Be Vietnam Pro"],"body-sm":["Be Vietnam Pro"],"label-md":["Be Vietnam Pro"],"headline-xl":["Be Vietnam Pro"],"display-lg-mobile":["Be Vietnam Pro"],"body-md":["Be Vietnam Pro"],"display-lg":["Be Vietnam Pro"],"headline-xl-mobile":["Be Vietnam Pro"]},fontSize:{"headline-md":["18px",{lineHeight:"26px",letterSpacing:"-0.005em",fontWeight:"600"}],"code-md":["13px",{lineHeight:"18px",fontWeight:"500"}],"label-lg":["14px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"600"}],"headline-sm":["16px",{lineHeight:"24px",fontWeight:"600"}],"headline-lg":["22px",{lineHeight:"30px",letterSpacing:"-0.01em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"600"}],"body-lg":["16px",{lineHeight:"26px",fontWeight:"400"}],"body-sm":["13px",{lineHeight:"20px",fontWeight:"400"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"500"}],"headline-xl":["28px",{lineHeight:"36px",letterSpacing:"-0.015em",fontWeight:"700"}],"display-lg-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-md":["14px",{lineHeight:"22px",fontWeight:"400"}],"display-lg":["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-xl-mobile":["22px",{lineHeight:"30px",letterSpacing:"-0.015em",fontWeight:"700"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-low"><div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[24px]">engineering</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-tight">SmartDorm</span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Kỹ thuật &amp; Bảo trì</span></div></div><div class="px-space-md py-space-sm"><div class="bg-surface-container px-space-sm py-space-xs rounded-lg flex items-center justify-between mb-space-sm"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Phân ban</span><span class="font-label-sm text-label-sm text-primary font-bold">KTX ĐHQG</span></div></div><nav class="flex flex-col gap-1 px-space-md" data-active-classes="bg-primary-container text-on-primary font-label-lg rounded-xl shadow-sm"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-2.5 transition-colors bg-primary-container text-on-primary font-label-lg rounded-xl shadow-sm" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Tổng quan công việc</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="assigned-tickets" href="#"><span class="material-symbols-outlined text-[20px]">assignment_late</span><span>Sự cố được phân công</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="in-progress-tickets" href="#"><span class="material-symbols-outlined text-[20px]">build_circle</span><span>Sự cố đang xử lý</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="pending-supplies-tickets" href="#"><span class="material-symbols-outlined text-[20px]">hourglass_top</span><span>Chờ vật tư / hỗ trợ</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="repair-history" href="#"><span class="material-symbols-outlined text-[20px]">history_toggle_off</span><span>Lịch sử &amp; Nghiệm thu</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="supplies-proposal" href="#"><span class="material-symbols-outlined text-[20px]">inventory</span><span>Báo cáo &amp; Đề xuất</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="notifications" href="#"><span class="material-symbols-outlined text-[20px]">notifications</span><span>Thông báo kỹ thuật</span></a></nav></div><div class="p-space-md"><div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[0_1px_3px_0_rgba(15,23,42,0.05)] flex flex-col gap-space-xs"><div class="flex items-center gap-space-xs text-primary"><span class="material-symbols-outlined text-[18px]">radio</span><span class="font-label-sm text-label-sm uppercase font-bold tracking-wide">Bộ đàm trực ban</span></div><div class="flex justify-between items-center text-body-sm font-body-sm pt-space-xs"><span class="text-on-surface-variant">Kênh VHF:</span><span class="font-code-md text-code-md font-bold text-on-surface bg-surface-container-high px-1.5 py-0.5 rounded">CH-03</span></div><div class="flex justify-between items-center text-body-sm font-body-sm"><span class="text-on-surface-variant">Hotline nội bộ:</span><span class="font-code-md text-code-md font-bold text-primary">024 3754 8888</span></div><div class="mt-space-xs pt-space-xs flex items-center gap-1.5"><div class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></div><span class="font-label-sm text-label-sm text-on-surface-variant">Trực kỹ thuật 24/7</span></div></div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-72"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-outline">search</span><input class="w-full h-10 pl-9 pr-3 rounded-lg bg-surface-container-lowest font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Mã phiếu sự cố / số phòng..." type="text"></div><div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-sm h-10 rounded-lg"><span class="material-symbols-outlined text-[18px] text-outline">apartment</span><select class="bg-transparent font-label-md text-label-md text-on-surface focus:outline-none cursor-pointer pr-space-xs"><option value="all">Tất cả khu KTX</option><option value="A">Khu A</option><option selected="" value="B">Khu B</option><option value="C">Khu C</option><option value="D">Khu D</option></select></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container"><div class="w-2.5 h-2.5 rounded-full bg-secondary"></div><span class="font-label-sm text-label-sm font-semibold text-secondary">Đang ca trực</span></div><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col text-left"><span class="font-label-md text-label-md font-bold text-on-surface leading-tight">Trần Văn Nam</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">KT Điện-Nước Bậc 4 • KTX Khu B</span></div></div></div></header><main class="w-full pt-16 bg-surface px-space-lg py-space-lg flex-1"><div class="flex flex-col w-full gap-space-lg">
+<!-- BANNER CHÀO & TRẠNG THÁI CA TRỰC -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg relative overflow-hidden">
+<div class="absolute -right-12 -top-12 w-64 h-64 bg-primary/5 rounded-full pointer-events-none blur-2xl"></div>
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md relative z-10">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-space-sm flex-wrap">
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Xin chào, KTV. Trần Văn Nam 🔧</h1>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm shadow-xs">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span>Đang sẵn sàng nhận việc (Online)</span>
+</div>
+<span class="font-code-md text-code-md bg-surface-container px-2 py-0.5 rounded text-on-surface-variant font-medium">Mã KTV: #KT-9942</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1 flex-wrap">
+<span class="material-symbols-outlined text-[18px] text-primary">schedule</span>
+<span class="font-medium text-on-surface">Ca 1 (07:30 - 16:30)</span>
+<span class="text-outline-variant">•</span>
+<span>Phụ trách Khu B (Tòa B1 - B4) &amp; Khu A cơ động</span>
+<span class="text-outline-variant">•</span>
+<span class="text-primary font-medium">Đội Kỹ thuật &amp; Hạ tầng KTX ĐHQG</span>
+</p>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap self-start xl:self-auto">
+<button class="inline-flex items-center gap-1.5 px-4 h-10 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-variant active:scale-95 transition-all font-label-lg text-label-lg shadow-sm" id="btn-handover" type="button">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">fact_check</span>
+<span>Nhật ký bàn giao ca</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-4 h-10 rounded-lg bg-primary-container text-on-primary hover:bg-primary active:scale-95 transition-all font-label-lg text-label-lg shadow-md" id="btn-propose-supply" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Báo cáo / Đề xuất vật tư</span>
+</button>
+</div>
+</div>
+</section>
+<!-- KPI CARDS & THỐNG KÊ TÁC NGHIỆP TRONG CA -->
+<section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-space-md">
+<!-- Thẻ 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Phiếu giao hôm nay</span>
+<div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">assignment</span>
+</div>
+</div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold">8</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">phiếu</span>
+</div>
+<div class="flex items-center gap-1.5 pt-1 bg-surface-container-low px-2 py-1 rounded">
+<span class="material-symbols-outlined text-[15px] text-primary">new_releases</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">+2 phiếu mới nhận</span>
+</div>
+</div>
+<!-- Thẻ 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Đang tiến hành xử lý</span>
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">build_circle</span>
+</div>
+</div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-headline-xl text-headline-xl text-secondary font-bold">3</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">đang thực hiện</span>
+</div>
+<div class="flex items-center gap-1.5 pt-1 bg-error-container px-2 py-1 rounded">
+<span class="material-symbols-outlined text-[15px] text-error font-bold">warning</span>
+<span class="font-label-sm text-label-sm text-on-error-container font-bold">1 khẩn cấp ưu tiên cao</span>
+</div>
+</div>
+<!-- Thẻ 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Chờ vật tư / Phối hợp</span>
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[20px]">pending_actions</span>
+</div>
+</div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-headline-xl text-headline-xl text-tertiary font-bold">2</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">tạm treo</span>
+</div>
+<div class="flex items-center gap-1 pt-1 text-on-surface-variant font-label-sm text-label-sm truncate">
+<span class="material-symbols-outlined text-[15px] text-outline">hourglass_empty</span>
+<span class="truncate">Chờ van xả 3/4 &amp; LED máng</span>
+</div>
+</div>
+<!-- Thẻ 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Nghiệm thu hoàn tất</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">task_alt</span>
+</div>
+</div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold">14</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">tuần này</span>
+</div>
+<div class="flex items-center gap-1.5 pt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="font-bold text-secondary font-code-md">93.3%</span>
+<span>đúng SLA (&lt; 4 giờ)</span>
+</div>
+</div>
+<!-- Thẻ 5 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Hài lòng sinh viên</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold">4.8</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/ 5.0 ⭐</span>
+</div>
+<div class="flex items-center gap-1 pt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-outline">verified</span>
+<span>Từ 36 lượt SV đánh giá</span>
+</div>
+</div>
+</section>
+<!-- KHU VỰC 2 CỘT CHÍNH (65% / 35%) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- CỘT TRÁI (65% ~ 8 COLS) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- DANH SÁCH SỰ CỐ ĐIỀU PHỐI -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-sm">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Danh sách sự cố ưu tiên &amp; Cần xử lý</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Phiếu bảo trì được điều phối tự động theo định vị ca trực</p>
+</div>
+<!-- BỘ LỌC TABS -->
+<div class="inline-flex p-1 bg-surface-container rounded-lg self-start sm:self-auto" id="ticket-filters">
+<button class="filter-tab px-3 py-1.5 rounded-md font-label-md text-label-md transition-colors bg-surface-container-lowest text-primary shadow-xs font-semibold" data-filter="all" type="button">Tất cả (8)</button>
+<button class="filter-tab px-3 py-1.5 rounded-md font-label-md text-label-md transition-colors text-on-surface-variant hover:text-on-surface" data-filter="urgent" type="button">Khẩn cấp (2)</button>
+<button class="filter-tab px-3 py-1.5 rounded-md font-label-md text-label-md transition-colors text-on-surface-variant hover:text-on-surface" data-filter="progress" type="button">Đang xử lý (3)</button>
+<button class="filter-tab px-3 py-1.5 rounded-md font-label-md text-label-md transition-colors text-on-surface-variant hover:text-on-surface" data-filter="waiting" type="button">Chờ vật tư (2)</button>
+</div>
+</div>
+<!-- DANH SÁCH PHIẾU CHI TIẾT -->
+<div class="flex flex-col gap-space-md" id="ticket-list-container">
+<!-- PHIẾU 1: KHẨN CẤP -->
+<article class="ticket-item p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-space-sm" data-category="urgent progress">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-error-container text-on-error-container font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">e911_emergency</span>
+<span>KHẨN CẤP</span>
+</span>
+<span class="font-code-md text-code-md font-bold text-on-surface">#SC-8092</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-lg text-label-lg font-bold text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">meeting_room</span>
+<span>P.A304 (Tầng 3 - Khu A)</span>
+</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-error/10 text-error font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px] animate-spin">alarm</span>
+<span>Hạn SLA: Còn 45 phút</span>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-space-md justify-between items-start">
+<div class="flex-1 flex flex-col gap-1.5">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Rò rỉ ống nước áp lực cao bồn rửa mặt, nguy cơ ngập sàn hành lang</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Áp lực đường cấp bồn lavabo bị bục khớp nối chữ T. Nước đang chảy xối xả xuống sàn gỗ nhân tạo. Cần khóa van nhánh trục đứng tầng 3 ngay lập tức.
+                </p>
+<div class="flex items-center gap-space-md text-on-surface-variant font-body-sm text-body-sm pt-1 flex-wrap">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">person</span>
+<span>Báo bởi: <strong class="text-on-surface">Lê Quốc Bảo</strong></span>
+</span>
+<a class="flex items-center gap-1 text-secondary font-code-md hover:underline font-semibold" href="tel:0984112334">
+<span class="material-symbols-outlined text-[16px]">phone_in_talk</span>
+<span>0984 112 334</span>
+</a>
+<span class="flex items-center gap-1 text-outline">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>Tiếp nhận: 10:15 (45 phút trước)</span>
+</span>
+</div>
+</div>
+<!-- ẢNH HIỆN TRƯỜNG NHẬN TỪ SINH VIÊN -->
+<div class="w-full md:w-36 h-24 rounded-lg overflow-hidden shrink-0 bg-surface-container-high relative group cursor-pointer shadow-xs">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Close up shot of high pressure water leaking violently from broken PVC pipe joint under bathroom washbasin, wet tiled floor in student dormitory, sharp realistic photo taken by student with phone flash." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA783ArShnJqv9dlF6eml3v_FyVUDEz1oH3IXqzzDKai4ThWn38iloZZU1FI8Mq6HPFypIf0SsfhIYesigN7nNc-_zKLqq-U2B65U6FVivP9OumGpscQ-L3z7ncS2SAR8uXy4eRJH9qyZ1XDNSXK1kWDvTWmgubGLs29IXwnfP2mxBhVrk4QB6KtxayEFzd2Evq56iSSSO5Ku384DbY0p_xmtbmCpA2jp2B4VKvXNZHZVx6FjjAe-ufyg">
+<span class="absolute bottom-1 right-1 bg-inverse-surface/80 text-inverse-on-surface px-1.5 py-0.5 rounded font-label-sm text-label-sm">Ảnh SV gửi</span>
+</div>
+</div>
+<!-- ACTION BUTTONS -->
+<div class="flex items-center justify-between pt-space-xs flex-wrap gap-2">
+<div class="flex items-center gap-1.5 text-error font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+<span>KTV cơ động đang mang cờ lê &amp; dây nối chịu nhiệt</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-highest hover:bg-surface-variant text-on-surface font-label-md text-label-md flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">photo_camera</span>
+<span>Chụp hiện trường</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-secondary text-on-secondary hover:bg-on-secondary-fixed-variant font-label-md text-label-md flex items-center gap-1 transition-colors shadow-xs" type="button">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>Đã đến phòng</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-md text-label-md flex items-center gap-1 transition-colors shadow-xs" type="button">
+<span class="material-symbols-outlined text-[16px]">update</span>
+<span>Cập nhật tiến độ</span>
+</button>
+</div>
+</div>
+</article>
+<!-- PHIẾU 2: TRUNG BÌNH / ĐANG XỬ LÝ -->
+<article class="ticket-item p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-space-sm" data-category="progress">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container text-on-surface-variant font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-amber-600">bolt</span>
+<span class="text-amber-800">TRUNG BÌNH</span>
+</span>
+<span class="font-code-md text-code-md font-bold text-on-surface">#SC-9102</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-lg text-label-lg font-bold text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">meeting_room</span>
+<span>P.B402 (Tầng 4 - Nhà B2)</span>
+</span>
+</div>
+<div class="flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+<span>Hẹn thay thế: 14:00 chiều nay</span>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-space-md justify-between items-start">
+<div class="flex-1 flex flex-col gap-1.5">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Bóng đèn tuýp LED ban công bị chập chờn, chấn lưu phát tiếng kêu rè rè</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Đã chuẩn bị bóng Rạng Đông T8 18W nhôm nhựa và máng chống ẩm sẵn trong túi đồ nghề. SV hẹn sau giờ nghỉ trưa có mặt ở phòng để hỗ trợ mở cửa.
+                </p>
+<div class="flex items-center gap-space-md text-on-surface-variant font-body-sm text-body-sm pt-1 flex-wrap">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">person</span>
+<span>Trưởng phòng: <strong class="text-on-surface">Đặng Hoàng Nam</strong></span>
+</span>
+<a class="flex items-center gap-1 text-secondary font-code-md hover:underline font-semibold" href="tel:0912345678">
+<span class="material-symbols-outlined text-[16px]">phone_in_talk</span>
+<span>0912 345 678</span>
+</a>
+</div>
+</div>
+<div class="w-full md:w-36 h-24 rounded-lg overflow-hidden shrink-0 bg-surface-container-high relative group cursor-pointer shadow-xs">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Student balcony ceiling fluorescent light fixture flickering with faint blue hum, clean modern university dorm setting, daylight with dim fluorescent tube." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGqR7ic2WiC_UIIOSjxtlYWr85cBEr9TgGNxUjjtzp1py52xQA6asAjKtVnT_6cfVp--QSRmNZgZtdlXnWUXc4hy_J2AWu4PdBexyVI6Se5i8HkdjXV2sdYztM3shefCSsFTdq-zpDMmQRzHM8rOg5QhCFZh4xhZmfmnW5c7BwYrwQjQMKnqXT36SZsIjG2wWLhtWWtbK6mVrmuNnyQPoUsD0_zrcYSUuGh_IyRl1F1kTP1o2-2B2_mQ">
+<span class="absolute bottom-1 right-1 bg-inverse-surface/80 text-inverse-on-surface px-1.5 py-0.5 rounded font-label-sm text-label-sm">Ảnh SV gửi</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs flex-wrap gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">inventory_2</span>
+<span>Vật tư: Bóng LED T8 1.2m đã có sẵn trong túi</span>
+</span>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-highest hover:bg-surface-variant text-on-surface font-label-md text-label-md flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+<span>Bắt đầu thay thế</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-md text-label-md flex items-center gap-1 transition-colors shadow-xs" type="button">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Hoàn thành &amp; Nghiệm thu</span>
+</button>
+</div>
+</div>
+</article>
+<!-- PHIẾU 3: THƯỜNG / ĐANG XỬ LÝ -->
+<article class="ticket-item p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-space-sm" data-category="progress">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-high text-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">info</span>
+<span>THƯỜNG</span>
+</span>
+<span class="font-code-md text-code-md font-bold text-on-surface">#SC-9088</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-lg text-label-lg font-bold text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">meeting_room</span>
+<span>P.B206 (Tầng 2 - Nhà B1)</span>
+</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-medium bg-secondary-fixed px-2 py-0.5 rounded">Đang xử lý tại chỗ</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Khóa tay gạt cửa phòng vệ sinh bị kẹt chốt trong</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Chốt lò xo hồi vị bị kẹt rỉ sét do ẩm. Đang xịt RP7 bôi trơn, siết lại 4 ốc định vị mặt ốp inox và thay lò xo đàn hồi phụ.
+              </p>
+<div class="flex items-center gap-space-md text-on-surface-variant font-body-sm text-body-sm flex-wrap">
+<span>Người báo: <strong class="text-on-surface">Nguyễn Văn Hùng</strong></span>
+<span class="font-code-md text-on-surface-variant">Bắt đầu sửa: 10:40</span>
+</div>
+</div>
+<div class="flex items-center justify-end gap-2 pt-space-xs">
+<button class="px-3 py-1.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-md text-label-md flex items-center gap-1 transition-colors shadow-xs" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span>Gửi nghiệm thu SV</span>
+</button>
+</div>
+</article>
+<!-- PHIẾU 4: CHỜ VẬT TƯ -->
+<article class="ticket-item p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-space-sm" data-category="waiting">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">hourglass_top</span>
+<span>CHỜ VẬT TƯ</span>
+</span>
+<span class="font-code-md text-code-md font-bold text-on-surface">#SC-8975</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-lg text-label-lg font-bold text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">meeting_room</span>
+<span>P.B115 (Tầng 1 - Nhà B3)</span>
+</span>
+</div>
+<span class="font-code-md text-code-md text-tertiary font-bold">Phiếu xin vật tư #VT-1049</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Quạt trần Vinawind phát nhiệt, nghi mòn bạc đạn</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Đã kiểm tra sơ bộ: Tụ 2uF bình thường, cuộn dây nóng 75°C, phát tiếng rít cơ khí. Đã lập phiếu đề xuất xuất kho cụm động cơ quạt trần thay thế, đang chờ Tổ trưởng Duyệt.
+              </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs flex-wrap gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Gửi duyệt lúc: 08:30 sáng nay • Phê duyệt: Thầy Tuấn (Tổ trưởng)</span>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-highest hover:bg-surface-variant text-primary font-label-md text-label-md flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Xem chi tiết đề xuất</span>
+</button>
+</div>
+</article>
+</div>
+</div>
+<!-- QUY TRÌNH CHUẨN XỬ LÝ SỰ CỐ (QUICK WORKFLOW) -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">account_tree</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Quy trình chuẩn kỹ thuật viên (SLA Chuẩn 4 Bước)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Đảm bảo an toàn lao động điện - nước &amp; minh bạch nghiệm thu sinh viên</p>
+</div>
+</div>
+<span class="font-code-md text-code-md bg-surface-container px-2 py-1 rounded text-primary font-bold">SOP-KT-2024</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1.5 relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-code-md text-code-md font-bold text-primary">BƯỚC 01</span>
+<span class="material-symbols-outlined text-[20px] text-primary">phone_in_talk</span>
+</div>
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface">Tiếp nhận &amp; Gọi SV</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Xác nhận mô tả lỗi, kiểm tra giờ sinh hoạt tại phòng, hẹn khung giờ đến xử lý.
+            </p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1.5 relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-code-md text-code-md font-bold text-secondary">BƯỚC 02</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">camera_alt</span>
+</div>
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface">Khảo sát &amp; Chụp ảnh</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Ngắt nguồn điện/nước an toàn. Chụp ảnh hiện trạng trước can thiệp làm căn cứ.
+            </p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1.5 relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-code-md text-code-md font-bold text-tertiary">BƯỚC 03</span>
+<span class="material-symbols-outlined text-[20px] text-tertiary">handyman</span>
+</div>
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface">Sửa chữa &amp; Thay thế</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Thay thế linh kiện đạt chuẩn từ kho KTX. Dán tem bảo hành và ghi thông số kỹ thuật.
+            </p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1.5 relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-code-md text-code-md font-bold text-secondary">BƯỚC 04</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">draw</span>
+</div>
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface">Nghiệm thu App SV</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Chụp ảnh sau sửa chữa. Sinh viên ký xác nhận hoặc quét mã QR xác thực chất lượng.
+            </p>
+</div>
+</div>
+</section>
+</div>
+<!-- CỘT PHẢI (35% ~ 4 COLS) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- HỘP ĐỒ NGHỀ & VẬT TƯ MANG THEO -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">home_repair_service</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Túi đồ nghề &amp; Vật tư ca trực</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Kiểm kê định kỳ đầu ca 1</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">5/5 chuẩn</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">lightbulb</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Bóng đèn LED T8 18W (1.2m)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Rạng Đông nhôm nhựa</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-code-md text-code-md font-bold text-on-surface">4 / 6</span>
+<span class="px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container text-primary font-bold">Đầy đủ</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-amber-600">shower</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Vòi xịt vệ sinh Inox 304</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Dây chống xoắn 1.2m</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-code-md text-code-md font-bold text-amber-700">1 cái</span>
+<span class="px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-amber-100 text-amber-900 font-bold">Sắp hết</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-outline">tune</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Băng tan Teflon cuốn ống</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cuộn 10m chịu áp</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-code-md text-code-md font-bold text-on-surface">3 cuộn</span>
+<span class="px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container text-primary font-bold">Sẵn sàng</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">toggle_on</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Aptomat tép 16A Schneider</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">MCB 1 pha ngắt tải</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-code-md text-code-md font-bold text-on-surface">2 cái</span>
+<span class="px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container text-primary font-bold">Có sẵn</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">water_heater</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Cầu chì nhiệt bình nóng lạnh 30L</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ferroli / Ariston tương thích</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-code-md text-code-md font-bold text-on-surface">2 cái</span>
+<span class="px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container text-primary font-bold">Có sẵn</span>
+</div>
+</div>
+</div>
+<button class="w-full py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-variant text-primary font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">inventory</span>
+<span>Tạo phiếu lĩnh vật tư kho trung tâm</span>
+</button>
+</section>
+<!-- GIÁM SÁT HẠ TẦNG IOT & CẢNH BÁO SCADA / MODBUS -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">sensors</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Hạ tầng IoT Khu B (Thời gian thực)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cảm biến hệ thống kết nối MQTT</p>
+</div>
+</div>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse" title="Live stream"></span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Cảnh báo 1: Dòng tải pha B -->
+<div class="p-space-sm rounded-lg bg-error-container text-on-error-container flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold flex items-center gap-1 text-error">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+<span>Tủ điện phân phối Tầng 3 - B2</span>
+</span>
+<span class="font-code-md text-code-md font-bold">11:20</span>
+</div>
+<p class="font-body-sm text-body-sm">
+              Dòng tải pha B tăng vọt <strong>18.4A</strong> (Vượt ngưỡng an toàn 15A). Nghi vấn sinh viên cắm thiết bị đun nấu công suất lớn ngoài danh mục.
+            </p>
+</div>
+<!-- Trạng thái 2: Bơm áp -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary">water_pump</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Bơm nước áp mái Tòa B4</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Áp suất vận hành bình thường</span>
+</div>
+</div>
+<span class="font-code-md text-code-md font-bold text-secondary bg-surface-container px-2 py-0.5 rounded">3.2 Bar</span>
+</div>
+<!-- Trạng thái 3: Cảm biến ngập hầm -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">flood</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Cảm biến rò rỉ phòng máy hầm</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Trạng thái sàn kỹ thuật</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Khô ráo</span>
+</span>
+</div>
+</div>
+</section>
+<!-- LỊCH SỬ NGHIỆM THU GẦN NHẤT & ĐÁNH GIÁ CỦA SV -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">rate_review</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Nghiệm thu gần nhất</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Đánh giá từ ứng dụng Sinh viên</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary hover:underline cursor-pointer">Xem tất cả</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="font-code-md text-code-md font-bold text-on-surface">#SC-8419</span>
+<span class="font-label-md text-label-md font-semibold text-primary">P.B402</span>
+</div>
+<div class="flex text-amber-500">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface italic">
+              "KTV Nam nhiệt tình, thay khóa vòi xịt rất chắc chắn và còn dọn sạch nước trên sàn giúp phòng."
+            </p>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant pt-0.5">
+<span>SV Đặng Hoàng Nam</span>
+<span>09:45 hôm nay</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="font-code-md text-code-md font-bold text-on-surface">#SC-8390</span>
+<span class="font-label-md text-label-md font-semibold text-primary">P.B310</span>
+</div>
+<div class="flex text-amber-500">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]">star</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface italic">
+              "Thay công tắc đèn bàn học nhanh, đúng hẹn, cẩn thận kiểm tra bút thử điện."
+            </p>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant pt-0.5">
+<span>SV Trần Mai Anh</span>
+<span>09:15 hôm nay</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- POPUP / MODAL ĐỀ XUẤT VẬT TƯ (ẨN MẶC ĐỊNH, KÍCH HOẠT QUA JS) -->
+<div class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-xs z-50 hidden items-center justify-center p-4" id="modal-supply-proposal">
+<div class="bg-surface-container-lowest rounded-2xl max-w-lg w-full p-space-lg shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">add_task</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Đề xuất xuất kho / Vật tư khẩn cấp</h3>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" id="close-supply-modal" type="button">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-sm">
+<label class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Tên loại vật tư / Thiết bị thay thế</span>
+<input class="h-10 px-3 rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Ví dụ: Van cửa đồng ren DN20, Khóa tròn tay nắm gạt..." type="text">
+</label>
+<div class="grid grid-cols-2 gap-space-sm">
+<label class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Số lượng xin cấp</span>
+<input class="h-10 px-3 rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface focus:outline-none" min="1" type="number" value="1">
+</label>
+<label class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Gắn vào Phiếu sự cố</span>
+<select class="h-10 px-3 rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface focus:outline-none">
+<option value="8092">#SC-8092 (P.A304 - Ống nước)</option>
+<option value="8975">#SC-8975 (P.B115 - Quạt trần)</option>
+<option value="other">Bổ sung vào túi đồ nghề dự phòng</option>
+</select>
+</label>
+</div>
+<label class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Lý do &amp; Ghi chú kỹ thuật</span>
+<textarea class="p-3 rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface focus:outline-none resize-none" placeholder="Ghi chú nguyên nhân hỏng hóc, chủng loại quy cách cần lấy đúng..." rows="3"></textarea>
+</label>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-4 h-10 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-lg text-label-lg transition-colors" id="cancel-supply-modal" type="button">
+          Hủy bỏ
+        </button>
+<button class="px-4 h-10 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-lg text-label-lg transition-colors shadow-md" id="submit-supply-modal" type="button">
+          Gửi Quản trị kho duyệt
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Tab filter interaction for Maintenance Tickets
+  const filterButtons = document.querySelectorAll('#ticket-filters button');
+  const ticketItems = document.querySelectorAll('.ticket-item');
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterButtons.forEach(b => {
+        b.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-xs', 'font-semibold');
+        b.classList.add('text-on-surface-variant');
+      });
+      btn.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-xs', 'font-semibold');
+      btn.classList.remove('text-on-surface-variant');
+
+      const filter = btn.getAttribute('data-filter');
+
+      ticketItems.forEach(item => {
+        const cat = item.getAttribute('data-category') || '';
+        if (filter === 'all') {
+          item.style.display = 'flex';
+        } else if (cat.includes(filter)) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Modal interactions
+  const openModalBtn = document.getElementById('btn-propose-supply');
+  const modal = document.getElementById('modal-supply-proposal');
+  const closeModalBtn = document.getElementById('close-supply-modal');
+  const cancelModalBtn = document.getElementById('cancel-supply-modal');
+  const submitModalBtn = document.getElementById('submit-supply-modal');
+
+  const toggleModal = (show) => {
+    if (show) {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    } else {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+  };
+
+  if (openModalBtn) openModalBtn.addEventListener('click', () => toggleModal(true));
+  if (closeModalBtn) closeModalBtn.addEventListener('click', () => toggleModal(false));
+  if (cancelModalBtn) cancelModalBtn.addEventListener('click', () => toggleModal(false));
+  if (submitModalBtn) {
+    submitModalBtn.addEventListener('click', () => {
+      alert('Đã gửi phiếu đề xuất vật tư thành công tới Tổ trưởng Kỹ thuật!');
+      toggleModal(false);
+    });
+  }
+
+  // Handover interaction
+  const handoverBtn = document.getElementById('btn-handover');
+  if (handoverBtn) {
+    handoverBtn.addEventListener('click', () => {
+      alert('Đang mở form bàn giao ca trực kỹ thuật Khu B (07:30 - 16:30)');
+    });
+  }
+</script></main></div></body></html>

@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed": "#e9ddff", "on-surface-variant": "#434655", "background": "#faf8ff", "on-secondary": "#ffffff", "on-tertiary": "#ffffff", "error-container": "#ffdad6", "surface-variant": "#dae2fd", "surface-container-high": "#e2e7ff", "outline": "#747686", "secondary-fixed-dim": "#89ceff", "on-secondary-fixed": "#001e2f", "primary-fixed-dim": "#b7c4ff", "on-surface": "#131b2e", "on-tertiary-fixed": "#23005c", "surface-dim": "#d2d9f4", "primary": "#0037b0", "on-background": "#131b2e", "on-secondary-container": "#004666", "inverse-surface": "#283044", "surface": "#faf8ff", "tertiary-fixed-dim": "#d0bcff", "primary-container": "#1d4ed8", "on-primary": "#ffffff", "on-error": "#ffffff", "surface-container-low": "#f2f3ff", "inverse-primary": "#b7c4ff", "tertiary-container": "#6b38d4", "primary-fixed": "#dce1ff", "secondary-container": "#39b8fd", "on-secondary-fixed-variant": "#004c6e", "tertiary": "#5311bc", "secondary": "#006591", "inverse-on-surface": "#eef0ff", "surface-container": "#eaedff", "secondary-fixed": "#c9e6ff", "on-primary-fixed": "#001551", "surface-tint": "#2151da", "on-primary-fixed-variant": "#0039b5", "on-tertiary-container": "#ddcdff", "on-tertiary-fixed-variant": "#5516be", "on-error-container": "#93000a", "surface-container-highest": "#dae2fd", "on-primary-container": "#cad3ff", "error": "#ba1a1a", "surface-container-lowest": "#ffffff", "surface-bright": "#faf8ff", "outline-variant": "#c4c5d7" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-sm": "1rem", "space-lg": "1.5rem", "space-xl": "2rem", "margin-tablet": "1.5rem", "gutter": "1.5rem", "space-md": "1rem", "space-sm": "0.5rem", "gutter-lg": "2rem", "space-xs": "0.25rem", "space-2xl": "3rem", "margin-mobile": "1rem", "margin": "2rem" }, "fontFamily": { "label-lg": [ "Be Vietnam Pro" ], "headline-xl": [ "Be Vietnam Pro" ], "headline-md": [ "Be Vietnam Pro" ], "display-lg": [ "Be Vietnam Pro" ], "label-md": [ "Be Vietnam Pro" ], "label-sm": [ "Be Vietnam Pro" ], "headline-lg": [ "Be Vietnam Pro" ], "body-md": [ "Be Vietnam Pro" ], "headline-sm": [ "Be Vietnam Pro" ], "body-lg": [ "Be Vietnam Pro" ], "headline-xl-mobile": [ "Be Vietnam Pro" ], "code-md": [ "JetBrains Mono" ], "body-sm": [ "Be Vietnam Pro" ], "display-lg-mobile": [ "Be Vietnam Pro" ] }, "fontSize": { "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "headline-xl": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" } ], "headline-md": [ "18px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "600" } ], "display-lg": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "headline-lg": [ "22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "22px", "fontWeight": "400" } ], "headline-sm": [ "16px", { "lineHeight": "24px", "fontWeight": "600" } ], "body-lg": [ "16px", { "lineHeight": "26px", "fontWeight": "400" } ], "headline-xl-mobile": [ "22px", { "lineHeight": "30px", "letterSpacing": "-0.015em", "fontWeight": "700" } ], "code-md": [ "13px", { "lineHeight": "18px", "fontWeight": "500" } ], "body-sm": [ "13px", { "lineHeight": "20px", "fontWeight": "400" } ], "display-lg-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col flex-1 overflow-y-auto"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container-lowest"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-on-primary font-headline-md font-bold shadow-sm">V</div><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-primary tracking-tight truncate leading-tight">SmartDorm VNU</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">ĐHQG TP.HCM</span></div></div><div class="px-space-md pt-space-md pb-space-xs"><div class="px-space-sm text-label-sm font-label-sm uppercase tracking-wider text-outline">Quản trị hệ thống</div></div><nav class="flex-1 px-space-sm py-space-xs space-y-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-lg rounded-xl shadow-sm"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Tổng quan / Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="users" href="#"><span class="material-symbols-outlined text-[20px]">manage_accounts</span><span>Quản lý tài khoản</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="roles" href="#"><span class="material-symbols-outlined text-[20px]">admin_panel_settings</span><span>Vai trò &amp; Phân quyền</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="catalog" href="#"><span class="material-symbols-outlined text-[20px]">apartment</span><span>Danh mục hệ thống</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="tariffs" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span>Biểu phí &amp; Định mức</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="audit" href="#"><span class="material-symbols-outlined text-[20px]">history_edu</span><span>Nhật ký kiểm toán</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">memory</span><span>Cấu hình IoT &amp; Cổng</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="reports" href="#"><span class="material-symbols-outlined text-[20px]">trending_up</span><span>Báo cáo &amp; Thống kê</span></a></nav></div><div class="p-space-md space-y-space-sm bg-surface-container-lowest"><div class="p-space-sm rounded-xl bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] text-on-surface-variant space-y-space-xs"><div class="flex items-center justify-between font-label-sm text-label-sm"><span class="flex items-center gap-1 font-semibold text-on-surface"><span class="material-symbols-outlined text-[14px] text-secondary">cloud_done</span>Hạ tầng Cloud &amp; IoT</span><span class="px-1.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-code-md text-[10px]">100% ONLINE</span></div><div class="font-code-md text-code-md text-[11px] space-y-0.5 text-on-surface-variant"><div class="flex justify-between"><span>CPU / RAM:</span><span class="font-semibold text-on-surface">24% | 4.2/16GB</span></div><div class="flex justify-between"><span>Sao lưu định kỳ:</span><span class="text-on-surface">02:00 hàng ngày</span></div></div></div><div class="px-space-xs text-[11px] leading-tight text-outline text-center">© 2025 TT Quản lý KTX ĐHQG-HCM<br/>SmartDorm Admin Portal</div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md flex-1 max-w-2xl"><span class="hidden lg:inline-flex items-center gap-1.5 px-space-sm py-1 rounded-md bg-surface-container-high text-primary font-label-sm text-label-sm"><span class="material-symbols-outlined text-[16px]">verified</span>Phân hệ Quản Trị Hệ Thống (Admin Console)</span><div class="relative flex-1 max-w-md"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full h-10 pl-9 pr-14 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" placeholder="Tìm kiếm người dùng, vai trò, tòa nhà, IP..." type="text"/><kbd class="absolute right-2.5 top-1/2 -translate-y-1/2 px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-code-md text-[11px]">Ctrl+K</kbd></div></div><div class="flex items-center gap-space-md"><span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-code-md text-label-sm">PROD - v2.4.0</span><div class="hidden md:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-low text-secondary font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span><span>Hoạt động 99.98%</span></div><div class="relative flex items-center justify-center"><button class="w-9 h-9 rounded-full hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors relative"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-error text-on-error font-label-sm text-[10px] flex items-center justify-center font-bold">3</span></button></div><button class="hidden sm:flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors"><span>SuperAdmin</span><span class="material-symbols-outlined text-[16px]">expand_more</span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden xl:flex flex-col text-left"><span class="font-label-lg text-label-sm text-on-surface leading-tight">Trần Hữu Thụy</span><span class="font-body-sm text-[11px] text-on-surface-variant leading-tight">GĐ Quản trị HT</span></div></div></div></header><main class="w-full px-gutter-lg pt-16 flex-1 bg-background"><div class="flex flex-col w-full pb-space-2xl space-y-space-xl">
+<!-- Dynamic Sidebar Highlighter Script -->
+<script>
+    (function() {
+      try {
+        const navLinks = document.querySelectorAll('aside nav a');
+        navLinks.forEach(link => {
+          if (link.getAttribute('data-path') === 'settings') {
+            link.className = 'flex items-center gap-space-sm px-space-md py-space-sm rounded-xl bg-primary-container text-on-primary font-label-lg text-label-lg shadow-sm';
+            const icon = link.querySelector('.material-symbols-outlined');
+            if (icon) icon.setAttribute('style', "font-variation-settings: 'FILL' 1;");
+          } else {
+            link.className = 'flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors';
+          }
+        });
+      } catch (e) {
+        console.error(e);
+      }
+    })();
+  </script>
+<!-- Page Header & Global Action Bar -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg pt-space-xs">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<span>Quản trị hệ thống</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>Tích hợp phần cứng &amp; Đám mây</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-semibold">Cấu hình IoT &amp; Cổng kết nối</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="w-2.5 h-7 rounded-full bg-primary"></div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Cấu Hình Thiết Bị IoT &amp; Cổng Tích Hợp Đa Phân Hệ</h1>
+</div>
+<p class="text-on-surface-variant font-body-md text-body-md max-w-3xl">
+        Quản lý tập trung các bộ tập trung Gateway Modbus RS485, cụm LoRaWAN, giao tiếp thiết bị ngoại vi thông minh và cấu hình cổng dịch vụ số ĐHQG-HCM.
+      </p>
+</div>
+<!-- Quick Action Controls -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-surface shadow-sm hover:bg-surface-container-high transition-all active:scale-95 font-label-lg text-label-lg" id="btn-health-check" onclick="triggerHealthCheck()">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified_user</span>
+<span>Kiểm tra kết nối (Health Check)</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container-high text-primary hover:bg-surface-container-highest transition-all active:scale-95 font-label-lg text-label-lg shadow-sm" id="btn-sync-gw" onclick="triggerSyncGateways()">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span>Đồng bộ cấu hình Gateway</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-primary-container text-on-primary hover:opacity-95 shadow-md transition-all active:scale-95 font-label-lg text-label-lg" onclick="restartWorkerModal()">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span>Khởi động lại Worker IoT</span>
+</button>
+</div>
+</div>
+<!-- Real-time Cluster Telemetry Banner (4 Key Pillars) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Metric 1: Gateways -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute right-0 top-0 translate-x-3 -translate-y-3 w-24 h-24 bg-primary-fixed/30 rounded-full blur-xl group-hover:scale-125 transition-transform"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="text-on-surface-variant font-label-md text-label-md">Gateway Modbus/LoRa</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-low text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">hub</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface">36/36</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-semibold">100% ONLINE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-1">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+          Độ trễ trung bình 18ms • TLS 1.3
+        </p>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-surface-container-high flex justify-between font-code-md text-[11px] text-on-surface-variant">
+<span>Giao thức: MQTT v5.0</span>
+<span class="text-secondary font-semibold">Mesh failover OK</span>
+</div>
+</div>
+<!-- Metric 2: Sensors & Peripherals -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute right-0 top-0 translate-x-3 -translate-y-3 w-24 h-24 bg-secondary-fixed/40 rounded-full blur-xl group-hover:scale-125 transition-transform"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="text-on-surface-variant font-label-md text-label-md">Cảm biến &amp; Thiết bị IoT</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-low text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">sensors</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface">4,812</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">node hoạt động</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 mt-2 overflow-hidden flex">
+<div class="bg-primary h-full" style="width: 30%" title="1,450 Công tơ điện"></div>
+<div class="bg-secondary-container h-full" style="width: 30%" title="1,450 Đồng hồ nước"></div>
+<div class="bg-tertiary-container h-full" style="width: 30%" title="1,450 Khóa SmartLock"></div>
+<div class="bg-error h-full" style="width: 10%" title="462 Khói PCCC &amp; 50 Barrier"></div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-surface-container-high flex justify-between font-code-md text-[11px] text-on-surface-variant">
+<span>4.35k phòng + 50 Barrier</span>
+<span class="text-on-surface font-medium">0 Cảnh báo cháy</span>
+</div>
+</div>
+<!-- Metric 3: MQTT Broker Cluster -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="text-on-surface-variant font-label-md text-label-md">MQTT Broker Cluster</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-low text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">dns</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface">99.99%</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Uptime 94d</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+          EMQX Enterprise • 4.2 MB/s lưu lượng
+        </p>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-surface-container-high flex justify-between font-code-md text-[11px] text-on-surface-variant">
+<span>8 Node Worker</span>
+<span class="text-secondary font-semibold">0 Queue Overflow</span>
+</div>
+</div>
+<!-- Metric 4: Time-series DB -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="text-on-surface-variant font-label-md text-label-md">CSDL Chuỗi Thời Gian</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-low text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">database</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface">1,200</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">metric/giây</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+          TimescaleDB Cloud • Nén dữ liệu 84%
+        </p>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-surface-container-high flex justify-between font-code-md text-[11px] text-on-surface-variant">
+<span>Snapshot tự động: 02:00</span>
+<span class="text-on-surface font-medium">Retention: 3 Năm</span>
+</div>
+</div>
+</div>
+<!-- Tab Navigation Shell -->
+<div class="flex flex-col space-y-space-lg">
+<div class="flex items-center gap-space-xs border-b border-surface-container-high overflow-x-auto pb-1">
+<button class="tab-trigger flex items-center gap-2 px-space-md py-3 font-label-lg text-label-lg text-primary border-b-2 border-primary transition-all whitespace-nowrap" id="btn-tab-iot" onclick="switchTab('tab-iot')">
+<span class="material-symbols-outlined text-[18px]">memory</span>
+<span>1. Cụm Gateway &amp; Thiết Bị IoT</span>
+<span class="px-1.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-code-md text-[10px]">36 GW</span>
+</button>
+<button class="tab-trigger flex items-center gap-2 px-space-md py-3 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-all whitespace-nowrap" id="btn-tab-payments" onclick="switchTab('tab-payments')">
+<span class="material-symbols-outlined text-[18px]">account_balance_wallet</span>
+<span>2. Cổng Thanh Toán &amp; Ngân Hàng</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-code-md text-[10px]">VNU-Pay</span>
+</button>
+<button class="tab-trigger flex items-center gap-2 px-space-md py-3 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-all whitespace-nowrap" id="btn-tab-notify" onclick="switchTab('tab-notify')">
+<span class="material-symbols-outlined text-[18px]">mark_chat_read</span>
+<span>3. Dịch Vụ SMS, Email &amp; Zalo ZNS</span>
+</button>
+<button class="tab-trigger flex items-center gap-2 px-space-md py-3 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-all whitespace-nowrap" id="btn-tab-sso" onclick="switchTab('tab-sso')">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+<span>4. Định Danh SSO &amp; VNU-ID</span>
+</button>
+<button class="tab-trigger flex items-center gap-2 px-space-md py-3 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-all whitespace-nowrap" id="btn-tab-backup" onclick="switchTab('tab-backup')">
+<span class="material-symbols-outlined text-[18px]">cloud_sync</span>
+<span>5. Sao Lưu &amp; Khôi Phục</span>
+</button>
+</div>
+<!-- TAB CONTENT CONTAINER -->
+<div class="space-y-space-xl">
+<!-- TAB 1: CỤM GATEWAY & THIẾT BỊ IOT (Active by Default) -->
+<div class="space-y-space-xl" id="tab-iot-content">
+<!-- Module 1: Master Gateway Buildings List -->
+<div class="flex flex-col space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Danh Sách Master Gateway Khu Vực (Building Concentrators)</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Phân luồng quản lý Modbus RTU và trạm trung chuyển dữ liệu điện nước từng tầng/tòa nhà.</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lọc nhanh:</span>
+<button class="px-2.5 py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm">Tất cả (36)</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-container-highest">Tòa B4 (6)</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-container-highest">Cổng Barrier (2)</button>
+</div>
+</div>
+<!-- Gateway Grid -->
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-space-md">
+<!-- Gateway B4-F04 (Detailed Focus Card) -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm space-y-space-md relative overflow-hidden ring-2 ring-primary/20">
+<div class="flex items-start justify-between">
+<div class="space-y-0.5">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">GW-B4-F04-IP192.168.4.1</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Master Gateway Tòa B4 - Tầng 04 (Phòng 401 đến 424)</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-code-md text-[11px] font-semibold">KẾT NỐI TỐT</span>
+</div>
+<!-- Technical Details Matrix -->
+<div class="grid grid-cols-2 gap-x-space-md gap-y-2 py-space-sm border-y border-surface-container-high font-body-sm text-body-sm">
+<div>
+<span class="text-on-surface-variant text-[12px] block">Giao thức vật lý:</span>
+<span class="font-code-md text-on-surface font-medium">Modbus RS485 / RTU</span>
+</div>
+<div>
+<span class="text-on-surface-variant text-[12px] block">Baudrate / Parity:</span>
+<span class="font-code-md text-on-surface font-medium">9600 bps - 8N1</span>
+</div>
+<div>
+<span class="text-on-surface-variant text-[12px] block">Chu kỳ đọc chuỗi:</span>
+<span class="font-code-md text-on-surface font-medium">60 giây / đợt quét</span>
+</div>
+<div>
+<span class="text-on-surface-variant text-[12px] block">Dự phòng kết nối:</span>
+<span class="font-code-md text-secondary font-medium">4G LTE Cat-M1 Fallback</span>
+</div>
+<div>
+<span class="text-on-surface-variant text-[12px] block">Node đồng hồ điện nước:</span>
+<span class="font-code-md text-on-surface font-medium">24 Phòng (48 Nodes)</span>
+</div>
+<div>
+<span class="text-on-surface-variant text-[12px] block">Firmware / Kernel:</span>
+<span class="font-code-md text-on-surface font-medium">v3.8.4-vnu-arm64</span>
+</div>
+</div>
+<!-- Action button bar for this gateway -->
+<div class="flex items-center justify-between gap-space-xs pt-1">
+<button class="px-2.5 py-1.5 rounded-md bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1 transition-colors" onclick="pingGateway('192.168.4.1')">
+<span class="material-symbols-outlined text-[16px]">network_ping</span>
+<span>Ping</span>
+</button>
+<button class="px-2.5 py-1.5 rounded-md bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1 transition-colors" onclick="openConfigModal('GW-B4-F04')">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Sửa IP/Port</span>
+</button>
+<button class="px-2.5 py-1.5 rounded-md bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1 transition-colors" onclick="downloadJsonConfig('GW-B4-F04')">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Tải JSON</span>
+</button>
+<button class="px-2.5 py-1.5 rounded-md bg-error-container text-on-error-container hover:opacity-90 font-label-md text-label-md flex items-center gap-1 transition-colors" onclick="remoteReboot('GW-B4-F04')">
+<span class="material-symbols-outlined text-[16px]">power_settings_new</span>
+<span>Reset</span>
+</button>
+</div>
+</div>
+<!-- Gateway B4-F03 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm space-y-space-md">
+<div class="flex items-start justify-between">
+<div class="space-y-0.5">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">GW-B4-F03-IP192.168.4.2</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Master Gateway Tòa B4 - Tầng 03 (Phòng 301 - 324)</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-code-md text-[11px] font-semibold">KẾT NỐI TỐT</span>
+</div>
+<div class="grid grid-cols-2 gap-x-space-md gap-y-2 py-space-sm border-y border-surface-container-high font-body-sm text-body-sm">
+<div>
+<span class="text-on-surface-variant text-[12px] block">Giao thức:</span>
+<span class="font-code-md text-on-surface">Modbus RS485</span>
+</div>
+<div>
+<span class="text-on-surface-variant text-[12px] block">Quét tín hiệu:</span>
+<span class="font-code-md text-on-surface">60s • Ping 14ms</span>
+</div>
+<div>
+<span class="text-on-surface-variant text-[12px] block">Tải CPU Gateway:</span>
+<span class="font-code-md text-on-surface">12% • RAM 145MB</span>
+</div>
+<div>
+<span class="text-on-surface-variant text-[12px] block">Tình trạng Relay:</span>
+<span class="font-code-md text-secondary font-medium">Bảo vệ 24/24</span>
+</div>
+</div>
+<div class="flex items-center justify-between gap-space-xs pt-1">
+<button class="px-2.5 py-1.5 rounded-md bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1 transition-colors" onclick="pingGateway('192.168.4.2')">
+<span class="material-symbols-outlined text-[16px]">network_ping</span>
+<span>Ping</span>
+</button>
+<button class="px-2.5 py-1.5 rounded-md bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1 transition-colors" onclick="openConfigModal('GW-B4-F03')">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Sửa IP/Port</span>
+</button>
+<button class="px-2.5 py-1.5 rounded-md bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1 transition-colors" onclick="downloadJsonConfig('GW-B4-F03')">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>JSON</span>
+</button>
+<button class="px-2.5 py-1.5 rounded-md bg-surface-container-low text-error hover:bg-error-container font-label-md text-label-md flex items-center gap-1 transition-colors" onclick="remoteReboot('GW-B4-F03')">
+<span class="material-symbols-outlined text-[16px]">power_settings_new</span>
+<span>Reset</span>
+</button>
+</div>
+</div>
+<!-- Gateway Barrier Gate A & B (RFID Vehicle Access) -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm space-y-space-md">
+<div class="flex items-start justify-between">
+<div class="space-y-0.5">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">GW-BARRIER-CENTRAL-01</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Bộ Điều Khiển Barrier RFID Tự Động - Cổng Khu B</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-code-md text-[11px] font-semibold">KẾT NỐI TỐT</span>
+</div>
+<div class="grid grid-cols-2 gap-x-space-md gap-y-2 py-space-sm border-y border-surface-container-high font-body-sm text-body-sm">
+<div>
+<span class="text-on-surface-variant text-[12px] block">Giao tiếp kiểm soát:</span>
+<span class="font-code-md text-on-surface">Wiegand 26/34 + IP</span>
+</div>
+<div>
+<span class="text-on-surface-variant text-[12px] block">Tốc độ mở barrier:</span>
+<span class="font-code-md text-on-surface">0.8 giây / xe</span>
+</div>
+<div>
+<span class="text-on-surface-variant text-[12px] block">AI Camera nhận diện:</span>
+<span class="font-code-md text-on-surface">LPR 4K 60FPS</span>
+</div>
+<div>
+<span class="text-on-surface-variant text-[12px] block">Xử lý offline:</span>
+<span class="font-code-md text-secondary font-medium">Lưu 10,000 thẻ</span>
+</div>
+</div>
+<div class="flex items-center justify-between gap-space-xs pt-1">
+<button class="px-2.5 py-1.5 rounded-md bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1 transition-colors" onclick="pingGateway('192.168.10.1')">
+<span class="material-symbols-outlined text-[16px]">network_ping</span>
+<span>Ping</span>
+</button>
+<button class="px-2.5 py-1.5 rounded-md bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1 transition-colors" onclick="openConfigModal('GW-BARRIER-01')">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Cấu hình</span>
+</button>
+<button class="px-2.5 py-1.5 rounded-md bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary font-label-md text-label-md flex items-center gap-1 transition-colors" onclick="openBarrierManual()">
+<span class="material-symbols-outlined text-[16px]">lock_open</span>
+<span>Mở khẩn</span>
+</button>
+<button class="px-2.5 py-1.5 rounded-md bg-surface-container-low text-error hover:bg-error-container font-label-md text-label-md flex items-center gap-1 transition-colors" onclick="remoteReboot('GW-BARRIER-01')">
+<span class="material-symbols-outlined text-[16px]">power_settings_new</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Module 2: MQTT Broker & Realtime Protocol Hierarchy -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left: MQTT Broker Configuration (7 Cols) -->
+<div class="lg:col-span-7 p-space-lg rounded-xl bg-surface-container-lowest shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">router</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Cấu Hình Thông Số Giao Thức MQTT Hub</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Kết nối tập trung dữ liệu cảm biến thời gian thực toàn khuôn viên KTX</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-code-md text-label-sm font-semibold">TLSv1.3 mTLS</span>
+</div>
+<div class="space-y-space-sm">
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<div class="sm:col-span-2 space-y-1">
+<label class="block font-label-md text-label-md text-on-surface font-semibold">Broker Endpoint (SSL/TLS)</label>
+<div class="relative">
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-code-md text-code-md focus:outline-none focus:ring-2 focus:ring-primary-container" type="text" value="mqtt.smartdorm.vnuhcm.edu.vn"/>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-secondary text-[18px]">verified</span>
+</div>
+</div>
+<div class="space-y-1">
+<label class="block font-label-md text-label-md text-on-surface font-semibold">Cổng (Secure Port)</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-code-md text-code-md focus:outline-none focus:ring-2 focus:ring-primary-container" type="text" value="8883"/>
+</div>
+</div>
+<!-- Topic Standard Pattern -->
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<label class="block font-label-md text-label-md text-on-surface font-semibold">Cấu Trúc Topic Hierarchy Chuẩn (ĐHQG VNU Architecture)</label>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Định dạng JSON Payload</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low font-code-md text-code-md text-on-surface flex items-center justify-between">
+<span class="text-primary font-semibold">vnu/ktx-b/toa-b4/phong-402/meter/power</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors" onclick="copyTopicString()" title="Sao chép topic pattern">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+</div>
+</div>
+<!-- QoS Configuration Rules -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container-low space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase font-semibold text-on-surface">Đo lường Định kỳ</span>
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-code-md text-[10px]">QoS 1</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant leading-relaxed">
+                    Đảm bảo chỉ số điện nước gửi ít nhất 1 lần (At least once), chống mất gói tin khi nghẽn mạng cục bộ.
+                  </p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase font-semibold text-on-surface">Lệnh Điều Khiển / Cắt Điện</span>
+<span class="px-2 py-0.5 rounded bg-tertiary-container text-on-tertiary font-code-md text-[10px]">QoS 2</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant leading-relaxed">
+                    Xác nhận phân phối đúng 1 lần duy nhất (Exactly once) cho lệnh kích hoạt SmartLock &amp; ngắt relay cháy nổ.
+                  </p>
+</div>
+</div>
+</div>
+<!-- Save & Validate Broker -->
+<div class="pt-space-xs flex justify-between items-center">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">lock</span>
+                Mã hóa chứng chỉ X.509 CA ĐHQG-HCM
+              </span>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-md text-label-md transition-colors">
+                Kiểm tra Pub/Sub Handshake
+              </button>
+</div>
+</div>
+<!-- Right: Safety Cut-off & Overcurrent Thresholds (Chống chập điện) (5 Cols) -->
+<div class="lg:col-span-5 p-space-lg rounded-xl bg-surface-container-lowest shadow-sm space-y-space-md flex flex-col justify-between">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-error-container text-error flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">electric_bolt</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Ngưỡng An Toàn Cháy Nổ &amp; Quá Tải</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tự động ngắt Relay khi sinh viên dùng bếp từ/ấm điện quá tải</span>
+</div>
+</div>
+</div>
+<div class="space-y-space-sm">
+<!-- Threshold 1: Current Limit -->
+<div class="p-space-sm rounded-lg bg-surface-container-low space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Giới Hạn Dòng Điện (Per Room):</span>
+<span class="font-code-md text-primary font-bold">25.0 Amperes</span>
+</div>
+<input class="w-full accent-primary h-2 bg-surface-container-high rounded-lg cursor-pointer" max="40" min="10" type="range" value="25"/>
+<div class="flex justify-between text-[11px] text-on-surface-variant font-code-md">
+<span>10A (Khuyến nghị)</span>
+<span class="text-error font-semibold">Tự động cắt Relay &gt; 25A</span>
+<span>40A (Toàn tầng)</span>
+</div>
+</div>
+<!-- Threshold 2: Wire Temperature Limit -->
+<div class="p-space-sm rounded-lg bg-surface-container-low space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Nhiệt Độ Dây Dẫn At-tô-mát:</span>
+<span class="font-code-md text-error font-bold">65.0°C</span>
+</div>
+<input class="w-full accent-error h-2 bg-surface-container-high rounded-lg cursor-pointer" max="90" min="40" type="range" value="65"/>
+<div class="flex justify-between text-[11px] text-on-surface-variant font-code-md">
+<span>40°C Bình thường</span>
+<span class="text-error font-semibold">Báo động còi &gt; 65°C</span>
+<span>90°C Nguy hiểm</span>
+</div>
+</div>
+<!-- Cutoff Speed -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-high">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">timer</span>
+<span class="font-body-sm text-body-sm text-on-surface">Thời gian phản hồi ngắt mạch:</span>
+</div>
+<span class="font-code-md text-code-md font-bold text-on-surface bg-surface-container-lowest px-2 py-0.5 rounded">&lt; 200 ms</span>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tự động kích hoạt còi hú tầng</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+<!-- Module 3: Khóa Cửa SmartLock Adel & Barrier Quản Lý Giờ Giới Nghiêm -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">door_sliding</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Tích Hợp Khóa Thông Minh SmartLock Adel &amp; Barrier Kiểm Soát</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Quản lý cấp quyền mã số PIN phòng ở, thẻ RFID sinh viên và cơ chế khóa cửa giờ giới nghiêm</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mã hóa chuẩn:</span>
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-code-md text-[11px] font-semibold">AES-128bit Dynamic Key</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Feature 1: Curfew Hours Schedule -->
+<div class="p-space-md rounded-lg bg-surface-container-low space-y-space-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Giờ Giới Nghiêm KTX</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-code-md text-[10px] font-bold">KÍCH HOẠT</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tự động khóa cổng Barrier chính và ghi nhận danh sách sinh viên vi phạm vào sau giờ quy định.</p>
+</div>
+<div class="space-y-2 pt-2">
+<div class="flex items-center gap-2">
+<div class="flex-1">
+<span class="text-[11px] text-on-surface-variant block font-label-sm">Bắt đầu giới nghiêm:</span>
+<input class="w-full h-9 px-2 rounded bg-surface-container-lowest font-code-md text-code-md text-on-surface" type="time" value="23:00"/>
+</div>
+<span class="text-on-surface-variant font-bold mt-3">→</span>
+<div class="flex-1">
+<span class="text-[11px] text-on-surface-variant block font-label-sm">Mở cửa sáng:</span>
+<input class="w-full h-9 px-2 rounded bg-surface-container-lowest font-code-md text-code-md text-on-surface" type="time" value="05:00"/>
+</div>
+</div>
+<div class="flex items-center gap-2 text-[12px] text-secondary font-medium">
+<span class="material-symbols-outlined text-[16px]">videocam</span>
+<span>Tự chụp ảnh nhận diện biển số &amp; khuôn mặt</span>
+</div>
+</div>
+</div>
+<!-- Feature 2: SmartLock Adel Sync -->
+<div class="p-space-md rounded-lg bg-surface-container-low space-y-space-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Đồng Bộ Mã PIN Sinh Viên</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-code-md text-[10px]">1,450 Khóa</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tự động hủy mã PIN phòng khi sinh viên hoàn tất thủ tục trả phòng hoặc kết thúc học kỳ.</p>
+</div>
+<div class="space-y-2 pt-2">
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant">Đổi mật mã định kỳ:</span>
+<span class="font-code-md font-semibold text-on-surface">90 Ngày / lần</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant">Thời lượng mở cửa an toàn:</span>
+<span class="font-code-md font-semibold text-on-surface">5 Giây</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant">Báo động cửa mở quá lâu:</span>
+<span class="font-code-md font-semibold text-error">&gt; 60 Giây</span>
+</div>
+</div>
+</div>
+<!-- Feature 3: Guest & Visitor Pass -->
+<div class="p-space-md rounded-lg bg-surface-container-low space-y-space-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Cấp Quyền Phụ Huynh / Khách</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-code-md text-[10px]">OTP / QR</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Mã QR truy cập thang máy và phòng ở có hiệu lực ngắn hạn cho phụ huynh đăng ký lưu trú.</p>
+</div>
+<div class="space-y-2 pt-2">
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant">Thời hạn hiệu lực mã QR:</span>
+<span class="font-code-md font-semibold text-on-surface">Tối đa 12 Giờ</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant">Gửi phê duyệt tự động:</span>
+<span class="font-code-md font-semibold text-secondary">Trưởng nhà KTX</span>
+</div>
+<button class="w-full py-1.5 rounded bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-md text-label-md transition-colors">
+                  Cấu hình quyền ra vào khách
+                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- TAB 2: CỔNG THANH TOÁN & NGÂN HÀNG -->
+<div class="hidden space-y-space-xl" id="tab-payments-content">
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm space-y-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Cổng Thanh Toán Tập Trung ĐHQG TP.HCM (VNU-Pay) &amp; VietQR Pro</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tự động gạch nợ hóa đơn tiền phòng, tiền điện nước tức thì khi sinh viên chuyển khoản</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-code-md text-label-sm font-semibold">TỰ ĐỘNG GẠCH NỢ 24/7</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- VNU-Pay Central Gateway Settings -->
+<div class="space-y-space-md p-space-md rounded-xl bg-surface-container-low">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+                  VNU-Pay Core API Configuration
+                </h4>
+<span class="font-code-md text-[11px] text-secondary font-medium">Production v2.1</span>
+</div>
+<div class="space-y-space-sm">
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-semibold mb-1">Merchant ID / University Partner Code</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-code-md text-code-md focus:outline-none focus:ring-2 focus:ring-primary-container" type="text" value="VNU-KTX-DORM-PROD-9981"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-semibold mb-1">Webhook URL tiếp nhận IPN (Instant Payment Notification)</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-code-md text-code-md focus:outline-none focus:ring-2 focus:ring-primary-container" type="text" value="https://api.smartdorm.vnuhcm.edu.vn/v1/payments/ipn"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-semibold mb-1">Secret SHA256 Signature Key</label>
+<div class="relative">
+<input class="w-full h-10 px-3 pr-10 rounded-lg bg-surface-container-lowest text-on-surface font-code-md text-code-md focus:outline-none focus:ring-2 focus:ring-primary-container" type="password" value="vnu_sec_live_98a7sd8f97asdf897asdf"/>
+<button class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">visibility</button>
+</div>
+</div>
+</div>
+</div>
+<!-- VietQR Napas247 Dynamic QR Settings -->
+<div class="space-y-space-md p-space-md rounded-xl bg-surface-container-low">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+                  VietQR Pro (Napas247 Auto-Reconcile)
+                </h4>
+<span class="font-code-md text-[11px] text-secondary font-medium">Vietcombank &amp; BIDV</span>
+</div>
+<div class="space-y-space-sm">
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-semibold mb-1">Tài Khoản Thụ Hưởng KTX (Bank Account)</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container" type="text" value="0071000998877 - TT Quản Lý Ký Túc Xá ĐHQG-HCM"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-semibold mb-1">Cú pháp nội dung chuyển khoản tự động</label>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest font-code-md text-code-md text-primary">
+                    KTX [MSSV] [MAPHONG] [THANGNAM]
+                  </div>
+<span class="text-[11px] text-on-surface-variant mt-1 block">Ví dụ: KTX 2112001 B4-402 T1125</span>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-label-md text-label-md text-on-surface">Đồng bộ tự động mở điện sau thanh toán:</span>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-code-md text-[11px] font-bold">&lt; 30 Giây</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- TAB 3: DỊCH VỤ SMS, EMAIL & ZALO CLOUD -->
+<div class="hidden space-y-space-xl" id="tab-notify-content">
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm space-y-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">chat_bubble</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Cổng Thông Báo Tự Động: Zalo ZNS, SMS Brandname &amp; SMTP ĐHQG</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Phát thông báo nợ tiền điện nước, cảnh báo vi phạm giới nghiêm và sự cố kỹ thuật</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-code-md text-label-sm">3 KÊNH HOẠT ĐỘNG</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Zalo ZNS -->
+<div class="p-space-md rounded-lg bg-surface-container-low space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Zalo Cloud ZNS</span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Gửi hóa đơn tiền điện nước hàng tháng và thông báo khẩn qua Zalo Official Account ĐHQG-HCM.</p>
+<div class="space-y-1 font-body-sm">
+<span class="text-on-surface-variant text-[11px] block">App ID OA:</span>
+<span class="font-code-md text-on-surface">482910492817482</span>
+</div>
+<button class="w-full py-1.5 rounded bg-surface-container-lowest hover:bg-surface-container-high text-primary font-label-md text-label-md transition-colors">
+                Xem Template ZNS
+              </button>
+</div>
+<!-- SMS Brandname -->
+<div class="p-space-md rounded-lg bg-surface-container-low space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">SMS Brandname KTX_VNU</span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Gửi mã OTP xác thực đăng nhập tài khoản sinh viên và mã mở khóa khẩn cấp.</p>
+<div class="space-y-1 font-body-sm">
+<span class="text-on-surface-variant text-[11px] block">Nhà mạng kết nối:</span>
+<span class="font-code-md text-on-surface">Viettel Telecom &amp; VNPT</span>
+</div>
+<button class="w-full py-1.5 rounded bg-surface-container-lowest hover:bg-surface-container-high text-primary font-label-md text-label-md transition-colors">
+                Kiểm tra Hạn ngạch SMS
+              </button>
+</div>
+<!-- SMTP ĐHQG-HCM -->
+<div class="p-space-md rounded-lg bg-surface-container-low space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">VNU Mail Relay (SMTP)</span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Hạ tầng máy chủ gửi mail nội bộ `@vnuhcm.edu.vn` cho toàn bộ cán bộ và sinh viên.</p>
+<div class="space-y-1 font-body-sm">
+<span class="text-on-surface-variant text-[11px] block">Mail Relay Server:</span>
+<span class="font-code-md text-on-surface">smtp.vnuhcm.edu.vn:587</span>
+</div>
+<button class="w-full py-1.5 rounded bg-surface-container-lowest hover:bg-surface-container-high text-primary font-label-md text-label-md transition-colors">
+                Gửi Thư Thử Nghiệm
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- TAB 4: ĐỊNH DANH SSO VNU-ID -->
+<div class="hidden space-y-space-xl" id="tab-sso-content">
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm space-y-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Cổng Định Danh Duy Nhất VNU-ID (CAS SSO &amp; OAuth2 / OIDC)</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cho phép sinh viên toàn bộ các trường thành viên (Bách Khoa, KHTN, KHXH&amp;NV, CNTT, Kinh tế...) đăng nhập KTX</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-code-md text-label-sm font-semibold">SSO CENTRAL OK</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="space-y-space-sm p-space-md rounded-xl bg-surface-container-low">
+<label class="block font-label-md text-label-md font-semibold text-on-surface">CAS Server URL</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-lowest font-code-md text-code-md text-on-surface" type="text" value="https://sso.vnuhcm.edu.vn/cas"/>
+<label class="block font-label-md text-label-md font-semibold text-on-surface mt-2">Client ID (OAuth2/OIDC)</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-lowest font-code-md text-code-md text-on-surface" type="text" value="smartdorm-vnu-prod-client-09281"/>
+</div>
+<div class="space-y-space-sm p-space-md rounded-xl bg-surface-container-low">
+<label class="block font-label-md text-label-md font-semibold text-on-surface">Đồng Bộ Dữ Liệu Sinh Viên ĐHQG (Data Bridge)</label>
+<div class="space-y-2 text-body-sm">
+<div class="flex justify-between">
+<span class="text-on-surface-variant">API Đồng bộ Phòng Đào tạo:</span>
+<span class="font-code-md text-secondary font-medium">Auto sync 03:00 AM</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Trạng thái khóa học / Thôi học:</span>
+<span class="font-code-md text-primary font-medium">Real-time Hook</span>
+</div>
+</div>
+<button class="w-full mt-4 py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-md text-label-md transition-colors">
+                Kích hoạt đồng bộ thủ công hồ sơ SV
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- TAB 5: SAO LƯU & KHÔI PHỤC DỮ LIỆU -->
+<div class="hidden space-y-space-xl" id="tab-backup-content">
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm space-y-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">cloud_sync</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Kế Hoạch Sao Lưu &amp; Dự Phòng Thảm Họa (Disaster Recovery Plan)</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lưu trữ phân tán tại Trung tâm Dữ liệu ĐHQG Thủ Đức và Cloud dự phòng</span>
+</div>
+</div>
+<button class="px-space-md py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all flex items-center gap-1 shadow-sm" onclick="startInstantBackup()">
+<span class="material-symbols-outlined text-[16px]">backup</span>
+<span>Sao lưu ngay bây giờ (Snapshot)</span>
+</button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<div class="p-space-md rounded-lg bg-surface-container-low space-y-2">
+<span class="font-label-md text-label-md text-on-surface-variant block">Bản sao lưu gần nhất</span>
+<span class="font-display-lg text-headline-xl text-on-surface block">Hôm nay 02:00</span>
+<span class="font-code-md text-[12px] text-secondary">smartdorm_full_20251104.tar.enc (14.2 GB)</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low space-y-2">
+<span class="font-label-md text-label-md text-on-surface-variant block">Mã hóa sao lưu (Encryption)</span>
+<span class="font-display-lg text-headline-xl text-primary block">AES-256 GCM</span>
+<span class="font-code-md text-[12px] text-on-surface-variant">Khóa HSM phân cấp Hardware</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low space-y-2">
+<span class="font-label-md text-label-md text-on-surface-variant block">RPO / RTO Mục Tiêu</span>
+<span class="font-display-lg text-headline-xl text-on-surface block">&lt; 15 Phút</span>
+<span class="font-code-md text-[12px] text-secondary">Tự động chuyển vùng trong 5 phút</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Persistent Bottom Action Save Bar -->
+<div class="sticky bottom-4 z-30 p-space-md rounded-2xl bg-surface-container-lowest/95 backdrop-blur-xl shadow-xl flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm text-body-sm text-on-surface-variant">
+<span class="w-3 h-3 rounded-full bg-secondary-container"></span>
+<span>Hệ thống ghi nhận cấu hình được đồng bộ tự động tới 36 Gateway IoT qua mạng mesh.</span>
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto justify-end">
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-lg text-label-lg transition-colors" onclick="resetDefaults()">
+        Khôi phục mặc định
+      </button>
+<button class="px-space-xl py-2.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-lg text-label-lg transition-all shadow-md active:scale-95 flex items-center gap-2" onclick="saveAllSettings()">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Lưu &amp; Áp Dụng Cấu Hình</span>
+</button>
+</div>
+</div>
+<!-- Interactive JavaScript Handling Tabs & Actions -->
+<script>
+    function switchTab(tabId) {
+      // List of tab IDs
+      const tabs = ['tab-iot', 'tab-payments', 'tab-notify', 'tab-sso', 'tab-backup'];
+      
+      tabs.forEach(id => {
+        const content = document.getElementById(id + '-content');
+        const btn = document.getElementById('btn-' + id);
+        if (content && btn) {
+          if (id === tabId) {
+            content.classList.remove('hidden');
+            btn.className = 'tab-trigger flex items-center gap-2 px-space-md py-3 font-label-lg text-label-lg text-primary border-b-2 border-primary transition-all whitespace-nowrap';
+          } else {
+            content.classList.add('hidden');
+            btn.className = 'tab-trigger flex items-center gap-2 px-space-md py-3 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-all whitespace-nowrap';
+          }
+        }
+      });
+    }
+
+    function triggerHealthCheck() {
+      const btn = document.getElementById('btn-health-check');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = `<span class="material-symbols-outlined animate-spin text-[18px]">progress_activity</span><span>Đang kiểm tra 36 Gateway...</span>`;
+      setTimeout(() => {
+        btn.innerHTML = `<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span><span>Tất cả cụm IoT OK (18ms)</span>`;
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+        }, 3000);
+      }, 1500);
+    }
+
+    function triggerSyncGateways() {
+      const btn = document.getElementById('btn-sync-gw');
+      const original = btn.innerHTML;
+      btn.innerHTML = `<span class="material-symbols-outlined animate-spin text-[18px]">sync</span><span>Đang gửi gói cấu hình...</span>`;
+      setTimeout(() => {
+        alert("Đã đồng bộ thành công tham số cho toàn bộ 36 Master Concentrators!");
+        btn.innerHTML = original;
+      }, 1200);
+    }
+
+    function restartWorkerModal() {
+      if (confirm("CẢNH BÁO: Bạn có chắc chắn muốn khởi động lại toàn bộ 8 Worker IoT Cluster? Quá trình sẽ mất khoảng 4-8 giây và không làm gián đoạn việc mở cửa tại chỗ.")) {
+        alert("Đã gửi tín hiệu RESTART tới cụm Docker Swarm / K8s Worker Nodes.");
+      }
+    }
+
+    function pingGateway(ip) {
+      alert(`Đang gửi 4 gói ICMP Ping tới Gateway [${ip}]...\nReply from ${ip}: bytes=32 time=16ms TTL=64\nReply from ${ip}: bytes=32 time=14ms TTL=64\nPacket loss: 0% - Hoàn hảo.`);
+    }
+
+    function openConfigModal(gwName) {
+      const newIp = prompt(`Nhập địa chỉ IP mới hoặc Port Modbus cho ${gwName}:`, "192.168.4.1:502");
+      if (newIp) {
+        alert(`Đã lưu cấu hình mới [${newIp}] cho thiết bị ${gwName}. Đang cập nhật ARP Table...`);
+      }
+    }
+
+    function downloadJsonConfig(gwName) {
+      const dummyConfig = {
+        gateway_id: gwName,
+        campus: "KTX Khu B - DHQG HCM",
+        modbus_baudrate: 9600,
+        mqtt_topic_prefix: "vnu/ktx-b/toa-b4",
+        curfew_active: true,
+        updated_at: new Date().toISOString()
+      };
+      const blob = new Blob([JSON.stringify(dummyConfig, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${gwName}-config.json`;
+      a.click();
+    }
+
+    function remoteReboot(gwName) {
+      if (confirm(`Bạn có chắc chắn muốn gửi lệnh khởi động lại phần cứng từ xa (Remote Soft Reboot) cho Gateway ${gwName}?`)) {
+        alert(`Lệnh REBOOT đã gửi thành công tới ${gwName} qua kênh MQTT Admin Control.`);
+      }
+    }
+
+    function openBarrierManual() {
+      if (confirm("Kích hoạt mở Barrier cổng xe khẩn cấp trong 30 giây? Thao tác này sẽ được ghi vào Nhật ký kiểm toán SuperAdmin.")) {
+        alert("Lệnh mở barrier thành công! Hệ thống camera AI đang lưu clip 60 giây đối ứng.");
+      }
+    }
+
+    function copyTopicString() {
+      navigator.clipboard.writeText("vnu/ktx-b/toa-b4/phong-402/meter/power");
+      alert("Đã sao chép chuỗi Topic Hierarchy chuẩn vào Clipboard!");
+    }
+
+    function startInstantBackup() {
+      alert("Bắt đầu khởi tạo bản Snapshot toàn phần CSDL Time-series & Cấu hình KTX. Tiến trình nền đang chạy...");
+    }
+
+    function resetDefaults() {
+      if (confirm("Bạn có chắc chắn muốn khôi phục toàn bộ thông số về cấu hình mặc định chuẩn của Ban Quản Lý KTX ĐHQG-HCM?")) {
+        alert("Đã khôi phục các tham số mặc định của hệ thống.");
+      }
+    }
+
+    function saveAllSettings() {
+      alert("LƯU THÀNH CÔNG: Toàn bộ cấu hình mạng IoT Gateway, Cổng thanh toán VNU-Pay, Quy tắc cắt điện an toàn và Khóa thông minh đã được áp dụng ngay lập tức!");
+    }
+  </script>
+</div></main></div></body></html>

@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-tertiary-fixed-variant":"#5516be","surface-container-lowest":"#ffffff","on-secondary-container":"#004666","on-secondary":"#ffffff","on-background":"#131b2e","on-error":"#ffffff","on-error-container":"#93000a","surface-container-high":"#e2e7ff","primary-container":"#1d4ed8","outline-variant":"#c4c5d7","inverse-on-surface":"#eef0ff","on-primary-fixed-variant":"#0039b5","tertiary":"#5311bc","surface-container":"#eaedff","secondary":"#006591","on-secondary-fixed":"#001e2f","on-primary":"#ffffff","secondary-fixed":"#c9e6ff","surface":"#faf8ff","inverse-surface":"#283044","outline":"#747686","surface-variant":"#dae2fd","on-primary-fixed":"#001551","on-tertiary-container":"#ddcdff","surface-container-low":"#f2f3ff","error-container":"#ffdad6","on-primary-container":"#cad3ff","on-tertiary":"#ffffff","primary-fixed-dim":"#b7c4ff","on-secondary-fixed-variant":"#004c6e","secondary-container":"#39b8fd","tertiary-fixed":"#e9ddff","tertiary-fixed-dim":"#d0bcff","on-surface":"#131b2e","surface-bright":"#faf8ff","secondary-fixed-dim":"#89ceff","tertiary-container":"#6b38d4","on-tertiary-fixed":"#23005c","primary-fixed":"#dce1ff","surface-dim":"#d2d9f4","surface-tint":"#2151da","on-surface-variant":"#434655","surface-container-highest":"#dae2fd","error":"#ba1a1a","background":"#faf8ff","inverse-primary":"#b7c4ff","primary":"#0037b0"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-sm":"0.5rem","margin":"2rem","space-2xl":"3rem","space-xs":"0.25rem","gutter-sm":"1rem","gutter-lg":"2rem","gutter":"1.5rem","space-md":"1rem","space-xl":"2rem","space-lg":"1.5rem","margin-tablet":"1.5rem","margin-mobile":"1rem"},"fontFamily":{"label-md":["Be Vietnam Pro"],"code-md":["JetBrains Mono"],"body-sm":["Be Vietnam Pro"],"body-lg":["Be Vietnam Pro"],"display-lg":["Be Vietnam Pro"],"label-sm":["Be Vietnam Pro"],"headline-xl-mobile":["Be Vietnam Pro"],"headline-lg":["Be Vietnam Pro"],"headline-md":["Be Vietnam Pro"],"body-md":["Be Vietnam Pro"],"headline-sm":["Be Vietnam Pro"],"headline-xl":["Be Vietnam Pro"],"label-lg":["Be Vietnam Pro"],"display-lg-mobile":["Be Vietnam Pro"]},"fontSize":{"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"code-md":["13px",{"lineHeight":"18px","fontWeight":"500"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"display-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"headline-xl-mobile":["22px",{"lineHeight":"30px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-lg":["22px",{"lineHeight":"30px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["18px",{"lineHeight":"26px","letterSpacing":"-0.005em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"headline-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"headline-xl":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"display-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}};</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-hidden"><div class="flex flex-col flex-1 overflow-hidden"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container-low shrink-0"><div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center shrink-0 shadow-sm"><span class="material-symbols-outlined text-on-primary text-[22px]">apartment</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-primary tracking-tight truncate">SmartDorm</span><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-semibold">VNU</span></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate">ĐHQG TP.HCM • Tòa B4</span></div></div><div class="px-space-md py-space-xs shrink-0"><div class="flex items-center gap-space-xs px-2.5 py-1.5 rounded-lg bg-surface-container"><span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span><span class="font-label-sm text-label-sm text-secondary uppercase font-semibold tracking-wider truncate">Manager Console</span></div></div><div class="flex-1 overflow-y-auto px-space-sm py-space-xs"><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-sm"><a class="flex items-center px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md truncate" data-path="tong-quan" href="#">Tổng quan</a><a class="flex items-center px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md truncate" data-path="sinh-vien-noi-tru" href="#">Sinh viên nội trú</a><a class="flex items-center px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md truncate" data-path="so-do-phong-csvc" href="#">Sơ đồ phòng &amp; CSVC</a><a class="flex items-center px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md truncate" data-path="xet-duyet-doi-phong" href="#">Xét duyệt &amp; Đổi phòng</a><a aria-current="page" class="flex items-center px-3 py-2.5 rounded-xl transition-colors truncate bg-primary-container text-on-primary-container font-semibold shadow-sm" data-path="hop-dong-tien-coc" href="#">Hợp đồng &amp; Tiền cọc</a><a class="flex items-center px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md truncate" data-path="hoa-don-tai-chinh" href="#">Hóa đơn &amp; Tài chính</a><a class="flex items-center px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md truncate" data-path="dieu-phoi-bao-tri" href="#">Điều phối &amp; Bảo trì</a><a class="flex items-center px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md truncate" data-path="ban-tin-thong-bao" href="#">Bản tin &amp; Thông báo</a><a class="flex items-center px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md truncate" data-path="bao-cao-thong-ke" href="#">Báo cáo &amp; Thống kê</a></nav></div></div><div class="p-space-sm bg-surface-container shrink-0 m-space-sm rounded-xl"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant">Ca trực B4: 18:00 - 06:00</span><span class="w-2 h-2 rounded-full bg-secondary"></span></div><div class="flex items-center gap-space-xs text-on-surface mb-1"><span class="material-symbols-outlined text-[16px] text-primary">phone_in_talk</span><span class="font-code-md text-code-md font-semibold text-primary">028.3724.4270 (B4)</span></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-label-sm text-label-sm">Đồng bộ dữ liệu KTX</span><span class="flex items-center gap-1 font-label-sm text-label-sm text-secondary font-medium"><span class="material-symbols-outlined text-[14px]">sync</span>Trực tuyến</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-md"><div class="flex items-center gap-space-md"><div class="relative flex items-center w-80"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">search</span><input class="w-full h-10 pl-9 pr-14 bg-surface-container rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Tìm SV, phòng, hóa đơn... (Ctrl+K)" type="text"/><kbd class="absolute right-2 px-1.5 py-0.5 rounded bg-surface-container-lowest font-code-md text-[11px] text-on-surface-variant shadow-sm">Ctrl K</kbd></div><div class="h-6 w-[1px] bg-outline-variant/40 hidden sm:block"></div><div class="flex items-center gap-space-xs px-3 py-1.5 bg-surface-container rounded-lg"><span class="material-symbols-outlined text-[18px] text-primary">calendar_month</span><select class="bg-transparent font-label-md text-label-md text-on-surface font-semibold focus:outline-none cursor-pointer"><option selected="" value="hk1-2024-2025">Học kỳ 1 (2024 - 2025)</option><option value="hk2-2023-2024">Học kỳ 2 (2023 - 2024)</option><option value="hk-he-2024">Học kỳ Hè 2024</option></select></div></div><div class="flex items-center gap-space-md"><div class="relative"><button aria-label="Thông báo" class="w-10 h-10 rounded-xl bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span></button><span class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-error text-on-error flex items-center justify-center font-label-sm text-[10px] font-bold shadow-sm">3</span></div><div class="flex items-center gap-space-sm pl-2"><div class="flex flex-col text-right"><span class="font-label-lg text-label-lg text-on-surface font-semibold leading-tight">Cô Nguyễn Thị Lan</span><span class="font-label-sm text-label-sm text-on-surface-variant">Cán bộ QL Tòa B4</span></div><div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center shadow-sm shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Operational Banner & Breadcrumbs -->
+<div class="px-margin pt-space-lg pb-space-sm bg-surface">
+<!-- Breadcrumb & Status Pill -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-xs">
+<nav aria-label="Breadcrumb" class="flex items-center gap-2">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[15px]">home_work</span>
+          Quản lý ký túc xá
+        </a>
+<span class="material-symbols-outlined text-outline text-[14px]">chevron_right</span>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Quản lý lưu trú</a>
+<span class="material-symbols-outlined text-outline text-[14px]">chevron_right</span>
+<span class="font-label-md text-label-md text-primary font-semibold">Hợp đồng &amp; Tiền cọc</span>
+</nav>
+<div class="flex items-center gap-space-sm">
+<span class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+          Cổng SmartCA ĐHQG: <strong class="text-secondary font-code-md">Online (SSL/SHA-256)</strong>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-2 py-1 rounded-md font-code-md">
+          HĐ-B4-SYNC: 14:45 Hôm nay
+        </span>
+</div>
+</div>
+<!-- Title & Action Bar -->
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md py-space-xs">
+<div class="min-w-0">
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight flex items-center gap-3">
+          Quản Lý Hợp Đồng &amp; Tiền Cọc Lưu Trú
+          <span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-semibold">
+            Tòa B4 • Khóa 2021-2024
+          </span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+          Giám sát 456 hợp đồng lưu trú Tòa B4 • Ký số điện tử VNPT SmartCA / SimCA • Hoàn trả &amp; Khấu trừ tiền cọc theo biên bản kiểm kê CSVC
+        </p>
+</div>
+<!-- Header CTAs -->
+<div class="flex flex-wrap items-center gap-space-sm shrink-0">
+<button class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-surface-container-lowest text-on-surface shadow-sm hover:bg-surface-container-high transition-colors font-label-lg text-label-lg font-medium" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">file_download</span>
+          Xuất báo cáo (Excel)
+        </button>
+<button class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-surface-container-lowest text-on-surface shadow-sm hover:bg-surface-container-high transition-colors font-label-lg text-label-lg font-medium" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">history_edu</span>
+          Kiểm tra hết hạn lưu trú
+        </button>
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary text-on-primary shadow-sm hover:bg-primary-container transition-all font-label-lg text-label-lg font-semibold" type="button">
+<span class="material-symbols-outlined text-[18px]">add_box</span>
+          + Tạo hợp đồng mới
+        </button>
+</div>
+</div>
+</div>
+<!-- KPI Metrics Cards Grid -->
+<div class="px-margin pt-space-sm pb-space-lg">
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- KPI Card 1: Active Contracts -->
+<div class="rounded-xl p-space-lg bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider block">Tổng hợp đồng hiệu lực</span>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-on-surface font-bold tracking-tight">456</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-normal">/ 480 giường</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center shrink-0 text-on-primary-fixed shadow-sm">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between bg-surface-container-low -mx-space-lg -mb-space-lg px-space-lg py-2">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary font-semibold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>98.2% đã ký SmartCA</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">8 bản giấy chờ duyệt</span>
+</div>
+</div>
+<!-- KPI Card 2: Expiring Soon -->
+<div class="rounded-xl p-space-lg bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider block">HĐ sắp hết hạn (30 ngày)</span>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-tertiary font-bold tracking-tight">28</span>
+<span class="font-label-md text-label-md text-tertiary font-medium">hồ sơ</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center shrink-0 text-on-tertiary-fixed shadow-sm">
+<span class="material-symbols-outlined text-[24px]">event_upcoming</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between bg-surface-container-low -mx-space-lg -mb-space-lg px-space-lg py-2">
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px] text-tertiary">school</span>
+<span>Khóa 2020 tốt nghiệp / Đồ án</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold hover:underline cursor-pointer">Gửi nhắc nhở</span>
+</div>
+</div>
+<!-- KPI Card 3: Escrow / Deposit Total -->
+<div class="rounded-xl p-space-lg bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider block">Tiền cọc đang lưu ký</span>
+<div class="mt-2 flex items-baseline gap-1">
+<span class="font-display-lg text-display-lg text-on-surface font-bold tracking-tight">684.000.000</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">đ</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center shrink-0 text-on-secondary-fixed shadow-sm">
+<span class="material-symbols-outlined text-[24px]">account_balance</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between bg-surface-container-low -mx-space-lg -mb-space-lg px-space-lg py-2">
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant truncate">
+<span>Chuẩn: <strong>1.500.000 đ/SV</strong></span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">TK BIDV KTX ĐHQG</span>
+</div>
+</div>
+<!-- KPI Card 4: Pending Inspection & Refund -->
+<div class="rounded-xl p-space-lg bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider block">Chờ nghiệm thu &amp; Hoàn cọc</span>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-error font-bold tracking-tight">06</span>
+<span class="font-label-md text-label-md text-error font-medium">phòng trả</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-error-container flex items-center justify-center shrink-0 text-on-error-container shadow-sm">
+<span class="material-symbols-outlined text-[24px]">assignment_late</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between bg-surface-container-low -mx-space-lg -mb-space-lg px-space-lg py-2">
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span>3 chờ đối soát CSVC</span>
+</div>
+<span class="font-label-sm text-label-sm text-error font-semibold hover:underline cursor-pointer">Xử lý ngay</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Operational Filter Toolbar -->
+<div class="px-margin mb-space-md">
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col gap-space-md">
+<!-- Search & Key Filters Bar -->
+<div class="flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-space-sm">
+<!-- Search bar -->
+<div class="relative flex-1 max-w-xl">
+<span class="material-symbols-outlined absolute left-3.5 top-2.5 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full h-11 pl-11 pr-4 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest shadow-inner" placeholder="Tìm theo Mã HĐ, MSSV, Họ tên SV, Số phòng (vd: HD-2024-B402-01, Đặng Hoàng Nam...)" type="text" value="HD-2024-B402-01"/>
+</div>
+<!-- Filter Dropdowns Group -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<!-- Filter: Tầng -->
+<div class="relative">
+<select class="h-11 px-3 py-2 bg-surface-container-low text-on-surface rounded-lg font-label-md text-label-md font-semibold focus:outline-none cursor-pointer appearance-none pr-8 shadow-sm">
+<option value="">Tất cả Tầng (1-5)</option>
+<option value="T1">Tầng 1 (Khu Trưởng Tầng)</option>
+<option value="T2">Tầng 2 (Khối kỹ thuật)</option>
+<option value="T3">Tầng 3 (Sinh viên năm 1)</option>
+<option selected="" value="T4">Tầng 4 (Sinh viên Bách Khoa)</option>
+<option value="T5">Tầng 5 (Khu tự quản)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-3 pointer-events-none text-on-surface-variant text-[18px]">arrow_drop_down</span>
+</div>
+<!-- Filter: Loại Phòng -->
+<div class="relative">
+<select class="h-11 px-3 py-2 bg-surface-container-low text-on-surface rounded-lg font-label-md text-label-md font-semibold focus:outline-none cursor-pointer appearance-none pr-8 shadow-sm">
+<option value="">Tất cả loại phòng</option>
+<option selected="" value="standard-4">Phòng 4 người (Tiêu chuẩn)</option>
+<option value="standard-6">Phòng 6 người</option>
+<option value="clc-ac">CLC Có Máy Lạnh</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-3 pointer-events-none text-on-surface-variant text-[18px]">arrow_drop_down</span>
+</div>
+<!-- Filter: Trạng thái tiền cọc -->
+<div class="relative">
+<select class="h-11 px-3 py-2 bg-surface-container-low text-on-surface rounded-lg font-label-md text-label-md font-semibold focus:outline-none cursor-pointer appearance-none pr-8 shadow-sm">
+<option value="">Trạng thái tiền cọc</option>
+<option selected="" value="paid">Đã nộp đủ (100%)</option>
+<option value="partial">Tạm giữ cọc</option>
+<option value="deducted">Đang khấu trừ CSVC</option>
+<option value="refunded">Đã hoàn trả SV</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-3 pointer-events-none text-on-surface-variant text-[18px]">arrow_drop_down</span>
+</div>
+<!-- Bulk Action Quick Buttons -->
+<button class="h-11 px-3.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-medium transition-colors flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">update</span>
+            Gia hạn hàng loạt
+          </button>
+<button class="h-11 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors flex items-center justify-center shadow-sm" title="Bộ lọc nâng cao" type="button">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Navigation Status Tabs -->
+<div class="flex items-center justify-between border-t border-transparent pt-1">
+<div class="flex flex-wrap items-center gap-1">
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md font-medium hover:bg-surface-container-high transition-colors" type="button">
+            Tất cả <span class="ml-1 text-on-surface-variant font-code-md">456</span>
+</button>
+<button class="px-3.5 py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold shadow-sm" type="button">
+            Đang hiệu lực <span class="ml-1 font-code-md">422</span>
+</button>
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md font-medium hover:bg-surface-container-high transition-colors" type="button">
+            Sắp hết hạn <span class="ml-1.5 px-1.5 py-0.2 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-code-md text-[11px]">28</span>
+</button>
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md font-medium hover:bg-surface-container-high transition-colors" type="button">
+            Chờ thanh lý &amp; Hoàn cọc <span class="ml-1.5 px-1.5 py-0.2 rounded-full bg-error-container text-on-error-container font-code-md text-[11px]">6</span>
+</button>
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md font-medium hover:bg-surface-container-high transition-colors" type="button">
+            Đã kết thúc / Hủy <span class="ml-1 text-on-surface-variant font-code-md">12</span>
+</button>
+</div>
+<div class="hidden md:flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span>Đang hiển thị 1 - 5 của 456 bản ghi</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Main 2-Column Professional Management Layout -->
+<div class="px-margin pb-space-2xl grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column (65% width approx = 8 of 12 cols): Contracts Master Table -->
+<div class="xl:col-span-8 flex flex-col gap-space-md">
+<!-- Table Wrapper Card -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden flex flex-col">
+<!-- Table Auxiliary Controls -->
+<div class="px-space-md py-3 bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Danh sách Hợp đồng lưu trú Tòa B4</span>
+</div>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">verified_user</span>
+            Chứng thư số: <strong>ĐHQG-HCM CA Root</strong>
+</div>
+</div>
+<!-- Table Responsive Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3.5 px-4 font-semibold" scope="col">Mã Hợp Đồng</th>
+<th class="py-3.5 px-4 font-semibold" scope="col">Sinh viên / MSSV</th>
+<th class="py-3.5 px-4 font-semibold" scope="col">Phòng &amp; Giường</th>
+<th class="py-3.5 px-4 font-semibold" scope="col">Thời Hạn Lưu Trú</th>
+<th class="py-3.5 px-4 font-semibold" scope="col">Tiền Cọc KTX</th>
+<th class="py-3.5 px-4 font-semibold" scope="col">Xác Thực e-Sign</th>
+<th class="py-3.5 px-4 font-semibold text-right" scope="col">Thao Tác</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low font-body-md text-body-md">
+<!-- Row 1: SELECTED ACTIVE CONTRACT -->
+<tr class="bg-primary-fixed/20 hover:bg-primary-fixed/30 transition-colors cursor-pointer">
+<td class="py-3.5 px-4 align-middle">
+<div class="flex flex-col">
+<span class="font-code-md text-code-md font-bold text-primary">#HD-2024-B402-01</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">e-Contract: 884920</span>
+</div>
+</td>
+<td class="py-3.5 px-4 align-middle">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold font-code-md text-label-sm shrink-0">
+                      ĐN
+                    </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Đặng Hoàng Nam</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-code-md">22120045 • ĐH Bách Khoa</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4 align-middle">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">B4-402</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Giường 01 (Tầng 1)</span>
+</div>
+</td>
+<td class="py-3.5 px-4 align-middle">
+<div class="flex flex-col font-code-md text-body-sm">
+<span class="text-on-surface font-medium">01/09/2024 - 31/07/2025</span>
+<span class="text-secondary font-label-sm">Còn 248 ngày hiệu lực</span>
+</div>
+</td>
+<td class="py-3.5 px-4 align-middle">
+<div class="flex flex-col">
+<span class="font-code-md font-bold text-on-surface">1.500.000 đ</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-[11px] text-secondary font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Đã nộp BIDV
+                    </span>
+</div>
+</td>
+<td class="py-3.5 px-4 align-middle">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+                    SmartCA • 05/09
+                  </span>
+</td>
+<td class="py-3.5 px-4 align-middle text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-lg bg-primary text-on-primary shadow-sm hover:bg-primary-container transition-colors" title="Xem hồ sơ hợp đồng chi tiết" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors" title="In phụ lục &amp; biên lai" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Active -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-4 align-middle">
+<div class="flex flex-col">
+<span class="font-code-md text-code-md font-bold text-on-surface">#HD-2024-B402-02</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">e-Contract: 884921</span>
+</div>
+</td>
+<td class="py-3.5 px-4 align-middle">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-bold font-code-md text-label-sm shrink-0">
+                      NA
+                    </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Nguyễn Văn An</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-code-md">2213591 • ĐH KHTN</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4 align-middle">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">B4-402</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Giường 02 (Tầng 2)</span>
+</div>
+</td>
+<td class="py-3.5 px-4 align-middle">
+<div class="flex flex-col font-code-md text-body-sm">
+<span class="text-on-surface font-medium">01/09/2024 - 31/07/2025</span>
+<span class="text-secondary font-label-sm">Còn 248 ngày hiệu lực</span>
+</div>
+</td>
+<td class="py-3.5 px-4 align-middle">
+<div class="flex flex-col">
+<span class="font-code-md font-bold text-on-surface">1.500.000 đ</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-[11px] text-secondary font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Đã nộp đủ
+                    </span>
+</div>
+</td>
+<td class="py-3.5 px-4 align-middle">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                    SmartCA Đã ký
+                  </span>
+</td>
+<td class="py-3.5 px-4 align-middle text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" title="Xem chi tiết" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors" title="Thao tác khác" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Addendum / Room Change -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-4 align-middle">
+<div class="flex flex-col">
+<span class="font-code-md text-code-md font-bold text-on-surface">#HD-2024-B403-02</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">PLĐP-01 (Đổi phòng)</span>
+</div>
+</td>
+<td class="py-3.5 px-4 align-middle">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-bold font-code-md text-label-sm shrink-0">
+                      TQ
+                    </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Trần Minh Quân</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-code-md">2213098 • ĐH Quốc Tế</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4 align-middle">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">B4-403</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">move_up</span>G02 (cũ: B4-206)
+                    </span>
+</div>
+</td>
+<td class="py-3.5 px-4 align-middle">
+<div class="flex flex-col font-code-md text-body-sm">
+<span class="text-on-surface font-medium">15/10/2024 - 31/07/2025</span>
+<span class="text-on-surface-variant font-label-sm">Đã chuyển cọc từ P206</span>
+</div>
+</td>
+<td class="py-3.5 px-4 align-middle">
+<div class="flex flex-col">
+<span class="font-code-md font-bold text-on-surface">1.500.000 đ</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-[11px] text-secondary font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Đã đối chuyển
+                    </span>
+</div>
+</td>
+<td class="py-3.5 px-4 align-middle">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px] text-secondary">domain_verification</span>
+                    Ký số phụ lục 01
+                  </span>
+</td>
+<td class="py-3.5 px-4 align-middle text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Expiring Soon (30/11) -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-4 align-middle">
+<div class="flex flex-col">
+<span class="font-code-md text-code-md font-bold text-tertiary">#HD-2024-B410-04</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Sắp hết hạn (12 ngày)</span>
+</div>
+</td>
+<td class="py-3.5 px-4 align-middle">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-bold font-code-md text-label-sm shrink-0">
+                      BH
+                    </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Bùi Văn Hậu</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-code-md">2110943 • ĐH Bách Khoa</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4 align-middle">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">B4-410</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Giường 04</span>
+</div>
+</td>
+<td class="py-3.5 px-4 align-middle">
+<div class="flex flex-col font-code-md text-body-sm">
+<span class="text-tertiary font-bold">Hết hạn: 30/11/2024</span>
+<span class="text-error font-label-sm font-semibold">Chưa gửi gia hạn HK2</span>
+</div>
+</td>
+<td class="py-3.5 px-4 align-middle">
+<div class="flex flex-col">
+<span class="font-code-md font-bold text-on-surface">1.500.000 đ</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cọc gốc lưu giữ</span>
+</div>
+</td>
+<td class="py-3.5 px-4 align-middle">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold hover:bg-tertiary hover:text-on-tertiary transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">send</span>
+                    Gửi SMS gia hạn
+                  </button>
+</td>
+<td class="py-3.5 px-4 align-middle text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Pending Inspection / Deduction & Refund -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-4 align-middle">
+<div class="flex flex-col">
+<span class="font-code-md text-code-md font-bold text-error">#HD-2023-B424-01</span>
+<span class="font-label-sm text-label-sm text-error font-semibold">Chờ hoàn cọc (1.35M)</span>
+</div>
+</td>
+<td class="py-3.5 px-4 align-middle">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-error-container text-on-error-container flex items-center justify-center font-bold font-code-md text-label-sm shrink-0">
+                      HT
+                    </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Hoàng Đức Thịnh</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-code-md">1912401 • TN Kỹ sư</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4 align-middle">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">B4-424</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Giường 01 (Đã dọn)</span>
+</div>
+</td>
+<td class="py-3.5 px-4 align-middle">
+<div class="flex flex-col font-code-md text-body-sm">
+<span class="text-on-surface-variant line-through">31/07/2024</span>
+<span class="text-error font-label-sm font-semibold">Trả phòng: 14/11/2024</span>
+</div>
+</td>
+<td class="py-3.5 px-4 align-middle">
+<div class="flex flex-col">
+<span class="font-code-md font-bold text-secondary">1.350.000 đ</span>
+<span class="font-label-sm text-[11px] text-error font-semibold">-150k Khóa tủ cá nhân</span>
+</div>
+</td>
+<td class="py-3.5 px-4 align-middle">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">receipt_long</span>
+                    Biên bản bàn giao
+                  </span>
+</td>
+<td class="py-3.5 px-4 align-middle text-right">
+<div class="inline-flex items-center gap-1">
+<button class="px-2.5 py-1.5 rounded-lg bg-secondary text-on-secondary shadow-sm hover:bg-on-secondary-container transition-colors font-label-sm text-label-sm font-medium flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">price_check</span>
+                      Duyệt chi
+                    </button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination Bar -->
+<div class="px-space-md py-3 bg-surface-container flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant">
+<span>Hiển thị</span>
+<select class="bg-surface-container-lowest text-on-surface rounded px-2 py-1 font-label-sm text-label-sm focus:outline-none cursor-pointer">
+<option selected="" value="5">5</option>
+<option value="10">10</option>
+<option value="25">25</option>
+<option value="50">50</option>
+</select>
+<span>trên tổng số <strong>456</strong> hợp đồng</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-[18px]">keyboard_double_arrow_left</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-semibold flex items-center justify-center shadow-sm" type="button">1</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors flex items-center justify-center" type="button">2</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors flex items-center justify-center" type="button">3</button>
+<span class="px-1 text-on-surface-variant">...</span>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors flex items-center justify-center" type="button">92</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-[18px]">keyboard_double_arrow_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Quick Operational Insights & Escrow Audit Banner -->
+<div class="rounded-xl p-space-md bg-surface-container-low shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[24px]">account_balance_wallet</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Tài khoản Ký quỹ Tiền cọc ĐHQG (BIDV Chi nhánh Đông Sài Gòn)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-code-md">Số TK: 1301.000.4920845 • Chủ TK: KTX ĐẠI HỌC QUỐC GIA TPHCM</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<span class="font-code-md text-code-md text-primary font-bold bg-surface-container-lowest px-3 py-1.5 rounded-lg shadow-sm">
+            Số dư kiểm toán: 684.000.000 đ
+          </span>
+<button class="px-3 py-1.5 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md font-semibold hover:bg-on-secondary-container transition-colors shadow-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">sync_alt</span>
+            Đối soát sao kê
+          </button>
+</div>
+</div>
+</div>
+<!-- Right Column (35% width approx = 4 of 12 cols): Selected Contract Dossier & Refund Lifecycle -->
+<div class="xl:col-span-4 flex flex-col gap-space-md">
+<!-- Panel Header & State Anchor -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col gap-space-md relative overflow-hidden">
+<!-- Live Badge -->
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">gavel</span>
+            Hồ sơ đang xử lý
+          </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-code-md">Mã HĐ: #HD-2024-B402-01</span>
+</div>
+<!-- Electronic Contract Card Details -->
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold leading-tight">
+            HỢP ĐỒNG LƯU TRÚ KÝ TÚC XÁ
+          </h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mt-0.5">
+            ĐHQG-HCM • Niên Khóa 2024 - 2025
+          </span>
+</div>
+<!-- Student Profile Card Inset -->
+<div class="rounded-xl bg-surface-container-low p-space-md flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-on-primary font-bold font-code-md text-headline-sm shrink-0 shadow-sm">
+              ĐN
+            </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">Đặng Hoàng Nam</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-code-md">MSSV: 22120045 (Khoa KHMT)</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Tòa B4 • Phòng 402 • Giường 01</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[24px]">verified</span>
+</div>
+<!-- e-Sign Seal & Digital Stamp Info -->
+<div class="rounded-xl p-space-md bg-surface-container flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Dấu mộc số VNPT e-Sign</span>
+<span class="font-code-md text-label-sm text-primary font-bold">SHA-256 Valid</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">verified_user</span>
+<span class="font-code-md text-code-md text-on-surface font-semibold">VNU-DORM-2024-884920</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-1">
+<span>Ký bởi: <strong>SV. Đặng Hoàng Nam</strong></span>
+<span>05/09/2024 14:02:19</span>
+</div>
+</div>
+<!-- Deposit & Inventory Assessment Card -->
+<div class="rounded-xl bg-surface-container-lowest shadow-inner p-space-md flex flex-col gap-space-sm bg-surface-container-low">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Biên bản Kiểm kê &amp; Tiền Cọc</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-bold">
+              Phòng 5S: 98/100đ
+            </span>
+</div>
+<!-- Price Ledger Breakdown -->
+<div class="flex flex-col gap-2 pt-1 font-body-sm text-body-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Tiền cọc ban đầu (Bắt buộc):</span>
+<span class="font-code-md text-on-surface font-semibold">1.500.000 đ</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Khấu trừ hư hao CSVC (Kiểm kê):</span>
+<span class="font-code-md text-secondary font-semibold">0 đ (Tốt)</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Phí nợ điện nước / Dịch vụ KTX:</span>
+<span class="font-code-md text-secondary font-semibold">0 đ</span>
+</div>
+<div class="h-0.5 bg-surface-container-high my-1"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Dự kiến hoàn khi trả phòng:</span>
+<span class="font-code-md text-headline-sm text-primary font-bold">1.500.000 đ</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant pt-0.5">
+<span class="material-symbols-outlined text-[15px] text-secondary">credit_card</span>
+<span>Hình thức hoàn: <strong>VNU-Pay / BIDV 6501000...</strong></span>
+</div>
+</div>
+</div>
+<!-- Quick Lifecycle Actions -->
+<div class="flex flex-col gap-2 pt-1">
+<button class="w-full py-2.5 px-4 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg font-semibold hover:bg-primary-container transition-all flex items-center justify-center gap-2 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">download_for_offline</span>
+            Tải File Hợp Đồng PDF (Có Chữ Ký Số)
+          </button>
+<button class="w-full py-2.5 px-4 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-lg text-label-lg font-semibold transition-colors flex items-center justify-center gap-2 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary">add_task</span>
+            Ký Phụ Lục Gia Hạn (2025 - 2026)
+          </button>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-medium transition-colors flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">inventory</span>
+              Nghiệm thu bàn giao
+            </button>
+<button class="py-2 px-3 rounded-lg bg-error-container hover:bg-error text-on-error-container hover:text-on-error font-label-md text-label-md font-semibold transition-colors flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">lock_reset</span>
+              Khóa SmartLock
+            </button>
+</div>
+</div>
+<!-- Contract Timeline Activity Log -->
+<div class="border-t border-surface-container-high pt-space-md">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase font-semibold block mb-space-sm tracking-wider">
+            Nhật ký nghiệp vụ hợp đồng
+          </span>
+<div class="flex flex-col gap-3 relative before:absolute before:left-2 before:top-2 before:bottom-2 before:w-0.5 before:bg-surface-container-high pl-6">
+<!-- Log item 1 -->
+<div class="relative">
+<span class="w-2 h-2 rounded-full bg-secondary absolute -left-[23px] top-1.5 ring-4 ring-surface-container-lowest"></span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-code-md">15/10/2024 • 10:00</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Cập nhật phụ lục điều chỉnh bạn cùng phòng B4-403</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cán bộ thực hiện: Nguyễn Thị Lan (B4)</span>
+</div>
+</div>
+<!-- Log item 2 -->
+<div class="relative">
+<span class="w-2 h-2 rounded-full bg-primary absolute -left-[23px] top-1.5 ring-4 ring-surface-container-lowest"></span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-code-md">06/09/2024 • 08:30</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Kích hoạt quyền mở cửa SmartLock tầng 4</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Tự động đồng bộ cổng KTX</span>
+</div>
+</div>
+<!-- Log item 3 -->
+<div class="relative">
+<span class="w-2 h-2 rounded-full bg-primary absolute -left-[23px] top-1.5 ring-4 ring-surface-container-lowest"></span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-code-md">05/09/2024 • 14:02</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Sinh viên ký số OTP thành công qua SmartCA</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-code-md">IP: 115.79.24.120 (KTX Khu B)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick AI Helper & Knowledge Assistant Widget -->
+<div class="rounded-xl p-space-md bg-surface-container-high shadow-sm flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-xl bg-tertiary text-on-tertiary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">smart_toy</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Trợ lý Pháp chế KTX</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-bold">AI Assistant</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            "Hợp đồng #HD-2024-B402-01 đáp ứng đầy đủ điều kiện bảo lưu phòng theo Quy chế KTX ĐHQG 2024. Tiền cọc lưu ký sẽ được đối soát tự động khi sinh viên hoàn thành thủ tục tốt nghiệp vào tháng 07/2025."
+          </p>
+<div class="mt-2 flex items-center gap-2">
+<a class="font-label-sm text-label-sm text-tertiary font-bold hover:underline flex items-center gap-0.5" href="#">
+              Xem quy định hoàn cọc 2024
+              <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating AI Assistant Trigger (Bottom Right Corner) -->
+<div class="fixed bottom-6 right-6 z-40">
+<button aria-label="Kích hoạt trợ lý AI KTX" class="w-14 h-14 rounded-full bg-gradient-to-tr from-primary to-tertiary text-on-primary flex items-center justify-center shadow-xl hover:scale-105 active:scale-95 transition-all group relative" onclick="alert('Kích hoạt trợ lý AI SmartDorm: Đang sẵn sàng tra cứu hợp đồng và tự động soạn thảo biên bản hoàn cọc!')" type="button">
+<span class="material-symbols-outlined text-[28px] group-hover:rotate-12 transition-transform">auto_awesome</span>
+<span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-secondary-container border-2 border-surface-container-lowest"></span>
+</button>
+</div>
+</div></main></div></body></html>
